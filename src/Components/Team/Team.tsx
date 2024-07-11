@@ -5,7 +5,7 @@ import data from "../../../data.json"
 
 const Team = () => {
     return (
-        <div className={styles.teamWrapper} id="team" >
+        <div className={styles.teamWrapper} id="team" style="margin-bottom: 100px;" >
             <h1>Our Team</h1>
             <div className={styles.teamBodyWrapper}>
                 <div className={styles.teamBgLineWrapper}>
@@ -14,8 +14,6 @@ const Team = () => {
                     <img src={line} alt="" loading="lazy" />
                     <img src={line2} alt="" loading="lazy" />
                      <img src={line} alt="" loading="lazy" />
-                    <img src={line2} alt="" loading="lazy" />
-                    <img src={line} alt="" loading="lazy" />
                     <img src={line2} alt="" loading="lazy" />
                 </div>
                 <div className={styles.teamMembersDetailsWrapper}>
