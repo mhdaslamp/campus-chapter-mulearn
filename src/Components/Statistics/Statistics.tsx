@@ -101,7 +101,7 @@ const Statistics = () => {
                                 {index === 0
                                     ? "STUDENTS"
                                     : index === 1
-                                        ? "LEARNING"
+                                        ? "ACTIVE"
                                         : index === 2
                                             ? "INTEREST"
                                             : "KARMA"
@@ -111,10 +111,10 @@ const Statistics = () => {
                                 {index === 0
                                     ? "ENROLLED"
                                     : index === 1
-                                        ? "CIRCLES"
+                                        ? "MEMBERS"
                                         : index === 2
                                             ? "GROUPS"
-                                            : "Points"}
+                                            : "MINED"}
                             </p>
                         </div>
                     ))}
