@@ -114,7 +114,7 @@ const Statistics = () => {
                                         ? "CIRCLES"
                                         : index === 2
                                             ? "GROUPS"
-                                            : "MINED"}
+                                            : "Points"}
                             </p>
                         </div>
                     ))}
