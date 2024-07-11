@@ -14,8 +14,7 @@ const Team = () => {
                     <img src={line} alt="" loading="lazy" />
                     <img src={line2} alt="" loading="lazy" />
                      <img src={line} alt="" loading="lazy" />
-                    
-                    <img src={line} alt="" loading="lazy" />
+                    <img src={line2} alt="" loading="lazy" />
                     
                 </div>
                 <div className={styles.teamMembersDetailsWrapper}>
