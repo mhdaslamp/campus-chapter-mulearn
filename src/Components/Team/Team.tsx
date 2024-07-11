@@ -130,7 +130,7 @@ const Team = () => {
                                 {data.team.contentLead.name}
                             </div>
                             <div className={styles.teamMemberDesignation}>
-                                Content Lead
+                                Design Lead
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@ const Team = () => {
                                 {data.team.operationLead.name}
                             </div>
                             <div className={styles.teamMemberDesignation}>
-                                Operation Lead
+                                 Lead
                             </div>
                         </div>
                     </div>
