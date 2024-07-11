@@ -66,11 +66,11 @@
     },
 
     "statistics": {
-        "studentsCount": 30,
-        "learningCircles": 10,
-        "InterestGroups": 5,
-        "karmaEarned": 60,
-        "rank": 28
+        "Members": 538,
+        "ActiveMembers": 10,
+        "InterestGroups": 3,
+        "karmaEarned": 231000,
+        "rank": 18
     },
 
     "team": {
