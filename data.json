@@ -66,8 +66,8 @@
     },
 
     "statistics": {
-        "Members": 538,
-        "ActiveMembers": 10,
+        "studentsCount": 538,
+        "learningCircles": 10,
         "InterestGroups": 3,
         "karmaEarned": 231000,
         "rank": 18
