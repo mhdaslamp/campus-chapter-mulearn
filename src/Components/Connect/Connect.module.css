@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0vh 10vw 5vh;
+  padding: 5vh 10vw;
   gap: 25px;
+  background-color: #ffffff; /* Add a background color to ensure it covers the team section */
 }
 
 .contentWrapper {

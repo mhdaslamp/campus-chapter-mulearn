@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    /* gap: 100px; */
     width: 100%;
     min-height: 100vh;
     margin-top: 3vh;
@@ -16,7 +16,7 @@
 .teamBodyWrapper {
     position: relative;
     height: 85vh;
-    min-height: 700px;
+    min-height: 1450px;
 }
 
 .teamBgLineWrapper {
@@ -27,12 +27,12 @@
     gap: 280px;
 }
 
-.teamBgLineWrapper>img {
+.teamBgLineWrapper > img {
     width: 100%;
 }
 
-.teamBgLineWrapper> :nth-child(3),
-.teamBgLineWrapper> :nth-child(4) {
+.teamBgLineWrapper > :nth-child(3),
+.teamBgLineWrapper > :nth-child(4) {
     display: none;
 }
 
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
     position: absolute;
 }
 
@@ -90,7 +90,6 @@
     color: #ad58ff;
     display: flex;
     font-size: 1.3rem;
-
     font-weight: 500;
     height: fit-content;
     justify-content: center;
@@ -116,35 +115,30 @@
 
 .team2 {
     margin-top: -50px;
-
     top: 0;
     left: 28%;
 }
 
 .team3 {
     margin-top: -60px;
-
     top: 0;
     left: 50%;
 }
 
 .team4 {
     margin-top: -10px;
-
     top: 0;
     left: 74%;
 }
 
 .team5 {
     margin-top: 350px;
-
     top: 100%;
     left: 7%;
 }
 
 .team6 {
     margin-top: 400px;
-
     top: 100%;
     left: 30%;
 }
@@ -156,11 +150,59 @@
 }
 
 .team8 {
-    margin-top: 360px;
-
+    margin-top: 560px;
     top: 100%;
-    left: 77%;
+    right: 35%;
 }
+
+.team9 {
+    margin-top: 50px;
+    top: 100%;
+    right: 80%;
+}
+
+.team10 {
+    margin-top: 50px;
+    top: 100%;
+    right: 30%;
+}
+
+.team11 {
+    margin-top: 50px;
+    top: 100%;
+    right: 54%;
+}
+
+.team12 {
+    margin-top: 50px;
+    top: 100%;
+    right: 7%;
+}
+
+.team13 {
+    margin-top: 400px;
+    top: 100%;
+    right: 7%;
+}
+
+.team14 {
+    margin-top: 400px;
+    top: 100%;
+    right: 30%;
+}
+
+.team15 {
+    margin-top: 400px;
+    top: 100%;
+    right: 54%;
+}
+
+.team16 {
+    margin-top: 400px;
+    top: 100%;
+    right: 77%;
+}
+
 
 @media screen and (max-width: 1650px) {
     .teamBodyWrapper {
@@ -179,7 +221,7 @@
 
     .team2 {
         margin-top: -70px;
-
+        
         top: 0;
         left: 28%;
     }
@@ -190,7 +232,7 @@
         top: 0;
         left: 50%;
     }
-
+    
     .team4 {
         margin-top: -50px;
 
@@ -204,7 +246,7 @@
         top: 100%;
         left: 7%;
     }
-
+    
     .team6 {
         margin-top: 330px;
 
@@ -217,12 +259,59 @@
         top: 100%;
         left: 54%;
     }
-
+    
     .team8 {
         margin-top: 310px;
-
+        
         top: 100%;
         left: 77%;
+    }
+    .team9 {
+        margin-top: 90px;
+        top: 100%;
+        right: 430%;
+    }
+    
+    .team10 {
+        margin-top: 50px;
+        top: 100%;
+        right: 290%;
+    }
+    
+    .team11 {
+        margin-top: 50px;
+        top: 100%;
+        right: 155%;
+    }
+    
+    .team12 {
+        margin-top: 50px;
+        top: 100%;
+        right: -8%;
+    }
+    
+    .team13 {
+        margin-top: 400px;
+        top: 100%;
+        right: 430%;
+    }
+    
+    .team14 {
+        margin-top: 400px;
+        top: 100%;
+        right: 280%;
+    }
+    
+    .team15 {
+        margin-top: 400px;
+        top: 100%;
+        right: 150%;
+    }
+    
+    .team16 {
+        margin-top: 400px;
+        top: 100%;
+        right: -8%;
     }
 }
 
@@ -231,67 +320,73 @@
         margin-top: 50px;
         gap: 100px;
     }
-
+    
     .teamBodyWrapper {
         height: 120vh;
     }
-
+    
     .teamBgLineWrapper {
         gap: 270px;
     }
-
+    
     .teamBgLineWrapper> :nth-child(3) {
         display: block;
     }
-
+    
     .teamImageIndividual {
         height: 12rem;
         width: 12rem;
     }
-
+    
     .team1 {
         margin-top: -70px;
         left: 3%;
     }
-
+    
     .team2 {
         margin-top: -100px;
         left: 37%;
     }
-
+    
     .team3 {
         margin-top: -60px;
         left: 69%;
     }
-
+    
     .team4 {
         margin-top: 230px;
-
+        
         top: 100%;
         left: 4%;
     }
-
+    
     .team5 {
         margin-top: 280px;
-
+        
         left: 37%;
     }
-
+    
     .team6 {
         margin-top: 245px;
-
+        
         left: 68%;
     }
-
+    
     .team7 {
         margin-top: 650px;
         left: 20%;
     }
-
+    
     .team8 {
         margin-top: 640px;
-
+        
         left: 60%;
+    }
+    .team9, .team10, .team11, .team12 {
+        margin-top: 950px;
+    }
+    .team13, .team14, .team15, .team16 {
+        margin-top: 1300px;
     }
 }
 
@@ -300,10 +395,10 @@
         margin-top: 620px;
         left: 20%;
     }
-
+    
     .team8 {
         margin-top: 610px;
-
+        
         left: 60%;
     }
 }
@@ -312,74 +407,80 @@
     .teamBodyWrapper {
         height: 105vh;
     }
-
+    
     .teamBgLineWrapper> :nth-child(3) {
         display: block;
     }
-
+    
     .teamBgLineWrapper {
         gap: 250px;
     }
-
+    
     .teamImageIndividual {
         height: 10rem;
         width: 10rem;
     }
-
+    
     .teamMemberName {
         font-size: 1rem;
     }
-
+    
     .teamMemberDesignation {
         font-size: .85rem;
     }
-
+    
     .team {
         width: 12.3rem;
     }
-
+    
     .team1 {
         margin-top: -100px;
         left: 3%;
     }
-
+    
     .team2 {
         margin-top: -120px;
         left: 35%;
     }
-
+    
     .team3 {
         margin-top: -80px;
         left: 65%;
     }
-
+    
     .team4 {
         margin-top: 160px;
-
+        
         left: 4%;
     }
-
+    
     .team5 {
         margin-top: 220px;
-
+        
         left: 36%;
     }
-
+    
     .team6 {
         margin-top: 190px;
-
+        
         left: 65%;
     }
-
+    
     .team7 {
         margin-top: 520px;
         left: 20%;
     }
-
+    
     .team8 {
         margin-top: 530px;
-
+        
         left: 56%;
+    }
+    .team9, .team10, .team11, .team12 {
+        margin-top: 850px;
+    }
+    .team13, .team14, .team15, .team16 {
+        margin-top: 1200px;
     }
 }
 
@@ -391,36 +492,36 @@
     .teamBodyWrapper {
         height: 120vh;
     }
-
+    
     .teamBgLineWrapper> :nth-child(4) {
         display: block;
     }
-
+    
     .teamBgLineWrapper {
         width: 100%;
         gap: 220px;
     }
-
+    
     .teamNameDesignation {
         font-size: 1rem;
     }
-
+    
     .team {
         width: 10rem;
     }
-
+    
     .team1 {
         margin-top: -120px;
         top: 0;
         left: 15%;
     }
-
+    
     .team2 {
         margin-top: -120px;
         top: 0%;
         left: 60%;
     }
-
+    
     .team3 {
         margin-top: 130px;
         top: 0;
@@ -429,19 +530,19 @@
 
     .team4 {
         margin-top: 150px;
-
+        
         left: 59%;
     }
 
     .team5 {
         margin-top: 430px;
-
+        
         left: 16%;
     }
 
     .team6 {
         margin-top: 420px;
-
+        
         left: 60%;
     }
 
@@ -449,10 +550,42 @@
         margin-top: 680px;
         left: 15%;
     }
-
+    
     .team8 {
         margin-top: 690px;
-
+        
+        left: 60%;
+    }
+    .team9 {
+        margin-top: 940px;
+        left: 15%;
+    }
+    .team10 {
+        margin-top: 930px;
+        left: 60%;
+    }
+    .team11 {
+        margin-top: 1190px;
+        left: 15%;
+    }
+    .team12 {
+        margin-top: 1200px;
+        left: 60%;
+    }
+    .team13 {
+        margin-top: 1450px;
+        left: 15%;
+    }
+    .team14 {
+        margin-top: 1440px;
+        left: 60%;
+    }
+    .team15 {
+        margin-top: 1700px;
+        left: 15%;
+    }
+    .team16 {
+        margin-top: 1710px;
         left: 60%;
     }
 }
@@ -481,13 +614,13 @@
         top: 0;
         left: 8%;
     }
-
+    
     .team4 {
         margin-top: 140px;
 
         left: 53%;
     }
-
+    
     .team5 {
         margin-top: 400px;
 
@@ -547,7 +680,7 @@
 
     .team4 {
         margin-top: 130px;
-
+        
         left: 52%;
     }
 
@@ -570,7 +703,7 @@
 
     .team8 {
         margin-top: 630px;
-
+        
         left: 52%;
     }
 }
