@@ -12,7 +12,7 @@ const Navbar = () => {
         setopenmenu(!openmenu);
     }
     const path = useReactPath();
-    const navContent = ["home", "about", "gallery", "team", "contact"];
+    const navContent = ["home", "about", "gallery", "team","leaderboard","contact"];
     useEffect(() => { }, [path]);
     const changeNavBg = () => {
         window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
