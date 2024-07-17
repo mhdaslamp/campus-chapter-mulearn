@@ -1,124 +1,153 @@
 {
-    "collegeCode": "GECSKP",
+  "collegeCode": "GECSKP",
 
-    "college": "Government Engineering College Sreekrishnapuram , Palakkad",
+  "college": "Government Engineering College Sreekrishnapuram , Palakkad",
 
-    "about": "Government Engineering College Sreekrishnapuram is a premier educational institute established in 1999. It is situated in Palakkad district of Kerala. The college is fully owned by Govt. of Kerala and is under the Directorate of Technical Education, Kerala. GEC Sreekrishnapuram is approved by the AICTE and is affiliated to the University of Calicut and APJ Abdul kalam Technological University (from 2015 onwards).",
+  "about": "Government Engineering College Sreekrishnapuram is a premier educational institute established in 1999. It is situated in Palakkad district of Kerala. The college is fully owned by Govt. of Kerala and is under the Directorate of Technical Education, Kerala. GEC Sreekrishnapuram is approved by the AICTE and is affiliated to the University of Calicut and APJ Abdul kalam Technological University (from 2015 onwards).",
 
-    "events": [
-        {
-            "month": "Sep",
-            "date": "29",
-            "head": "Event 1",
-            "para": "Webinar on Engineering and Industrial Services division of TCS.",
-            "img": "https://wallpaperaccess.com/full/1642272.jpg"
-        },
-        {
-            "month": "Sep",
-            "date": "27",
-            "head": "Opportunities in TCS EIS",
-            "para": "Webinar on Engineering and Industrial Services division of TCS.",
-            "img": "https://wallpaperaccess.com/full/1642272.jpg"
-        },
-        {
-            "month": "Sep",
-            "date": "26",
-            "head": "Opportunities in TCS EIS",
-            "para": "Webinar on Engineering and Industrial Services division of TCS.",
-            "img": "https://wallpaperaccess.com/full/1642272.jpg"
-        },
-        {
-            "month": "Sep",
-            "date": "25",
-            "head": "Opportunities in TCS EIS",
-            "para": "Webinar on Engineering and Industrial Services division of TCS.",
-            "img": "https://wallpaperaccess.com/full/1642272.jpg"
-        },
-        {
-            "month": "Sep",
-            "date": "25",
-            "head": "Opportunities in TCS EIS",
-            "para": "Webinar on Engineering and Industrial Services division of TCS.",
-            "img": "https://wallpaperaccess.com/full/1642272.jpg"
-        }
+  "events": [
+    {
+      "month": "Sep",
+      "date": "29",
+      "head": "Event 1",
+      "para": "Webinar on Engineering and Industrial Services division of TCS.",
+      "img": "https://wallpaperaccess.com/full/1642272.jpg"
+    },
+    {
+      "month": "Sep",
+      "date": "27",
+      "head": "Opportunities in TCS EIS",
+      "para": "Webinar on Engineering and Industrial Services division of TCS.",
+      "img": "https://wallpaperaccess.com/full/1642272.jpg"
+    },
+    {
+      "month": "Sep",
+      "date": "26",
+      "head": "Opportunities in TCS EIS",
+      "para": "Webinar on Engineering and Industrial Services division of TCS.",
+      "img": "https://wallpaperaccess.com/full/1642272.jpg"
+    },
+    {
+      "month": "Sep",
+      "date": "25",
+      "head": "Opportunities in TCS EIS",
+      "para": "Webinar on Engineering and Industrial Services division of TCS.",
+      "img": "https://wallpaperaccess.com/full/1642272.jpg"
+    },
+    {
+      "month": "Sep",
+      "date": "25",
+      "head": "Opportunities in TCS EIS",
+      "para": "Webinar on Engineering and Industrial Services division of TCS.",
+      "img": "https://wallpaperaccess.com/full/1642272.jpg"
+    }
+  ],
+
+  "gallery": {
+    "row1": [
+      {
+        "image": "https://mulearn.org/assets/home/illustration.webp"
+      },
+      {
+        "image": "https://mulearn.org/assets/home/Chart.webp"
+      },
+      {
+        "image": "https://learn.mulearn.org/assets/challenge/typingsample.webp"
+      }
     ],
+    "row2": [
+      {
+        "image": "https://th.bing.com/th/id/OIP.p5zC9uLm5ByGSy8gYI0McAHaE8?pid=ImgDet&rs=1"
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/5c710438b914490d5769a64f/b4fb2b4f-5f95-41a1-9416-d156d0ae273f/Most+Famous+Astrologer+in+the+World.jpg"
+      }
+    ]
+  },
 
-    "gallery": {
-        "row1": [
-            {
-                "image": "https://mulearn.org/assets/home/illustration.webp"
-            },
-            {
-                "image": "https://mulearn.org/assets/home/Chart.webp"
-            },
-			{
-				"image": "https://learn.mulearn.org/assets/challenge/typingsample.webp"
-			}
-        ],
-        "row2": [
-            {
-                "image": "https://th.bing.com/th/id/OIP.p5zC9uLm5ByGSy8gYI0McAHaE8?pid=ImgDet&rs=1"
-            },
-            {
-                "image": "https://images.squarespace-cdn.com/content/v1/5c710438b914490d5769a64f/b4fb2b4f-5f95-41a1-9416-d156d0ae273f/Most+Famous+Astrologer+in+the+World.jpg"
-            }
-        ]
+  "statistics": {
+    "studentsCount": 538,
+    "learningCircles": 288,
+    "InterestGroups": 3,
+    "karmaEarned": 231000,
+    "rank": 18
+  },
+  
+  "team": {
+    "staffAdvisor": {
+      "name": "ANOOP S K M",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
     },
-
-    "statistics": {
-        "studentsCount": 538,
-        "learningCircles": 288,
-        "InterestGroups": 3,
-        "karmaEarned": 231000,
-        "rank": 18
+    "campusLead": {
+      "name": "RENY MATHEW",
+      "image": "https://th.bing.com/th/id/OIP.DjyPSeO-t7bK2agoLSYJzgHaHa?pid=ImgDet&rs=1"
     },
-
-    "team": {
-        "staffAdvisor": {
-            "name": "ANOOP S K M",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        },
-        "campusLead": {
-            "name": "RENY MATHEW",
-            "image": "https://th.bing.com/th/id/OIP.DjyPSeO-t7bK2agoLSYJzgHaHa?pid=ImgDet&rs=1"
-        },
-        "campusCoLead": {
-            "name": "ASLAM",
-            "image": "https://postimg.cc/5X9QVC9F"
-        },
-        "treasurer": {
-            "name": "DIYA BETCY",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        },
-        "technicalLead": {
-            "name": "ASNA KS",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        },
-        "mediaLead": {
-            "name": "HANAN",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        },
-        "contentLead": {
-            "name": "NANDANA VS",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        },
-        "operationLead": {
-            "name": "Enric S Neelamkavil",
-            "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
-        }
+    "campusCoLead": { "name": "ASLAM", "image": "https://postimg.cc/5X9QVC9F" },
+    "treasurer": {
+      "name": "DIYA BETCY",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
     },
+    "technicalLead": {
+      "name": "ASNA KS",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "mediaLead": {
+      "name": "HANAN",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "contentLead": {
+      "name": "NANDANA VS",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "operationLead": {
+      "name": "Enric S Neelamkavil",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team1": {
+      "name": "Team Member 1",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team2": {
+      "name": "Team Member 2",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team3": {
+      "name": "Team Member 3",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team4": {
+      "name": "Team Member 4",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team5": {
+      "name": "Team Member 5",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team6": {
+      "name": "Team Member 6",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team7": {
+      "name": "Team Member 7",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    },
+    "team8": {
+      "name": "Team Member 8",
+      "image": "https://mulearn-cce.vercel.app/static/media/img1.31943833473f0d0a748b.png"
+    }
+  },
 
-    "discordLink": "",
+  "discordLink": "",
 
-    "whatsAppLink": "",
+  "whatsAppLink": "",
 
-    "email": "",
+  "email": "",
 
-    "linkedIn": "https://www.linkedin.com/company/%CE%BClearn-gec-pkd/",
+  "linkedIn": "https://www.linkedin.com/company/%CE%BClearn-gec-pkd/",
 
-    "instagram": "https://www.instagram.com/mulearn.gecskp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
+  "instagram": "https://www.instagram.com/mulearn.gecskp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
 
-    "twitter": "https://twitter.com/MulearnGecPkd",
+  "twitter": "https://twitter.com/MulearnGecPkd",
 
-    "facebook": ""
+  "facebook": ""
 }
