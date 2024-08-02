@@ -82,7 +82,9 @@
       "name": "RENY MATHEW",
       "image": "https://i.postimg.cc/sxPgbsLb/reny.png"
     },
-    "campusCoLead": { "name": "ASLAM", "image": "https://i.postimg.cc/VLdYj9f3/aslam.png" },
+    "campusCoLead": { "name": "ASLAM", 
+    "image": "https://i.postimg.cc/VLdYj9f3/aslam.png" },
+
     "treasurer": {
       "name": "DIYA BETCY",
       "image": "https://i.postimg.cc/526CGFxz/diya.png"
@@ -104,36 +106,36 @@
       "image": "https://i.postimg.cc/5N4M3Bxx/shadil.png"
     },
     "team1": {
-      "name": "Navami BR",
-      "image": "https://i.postimg.cc/y6wL6Bb2/navami.png"
+      "name": "Ameena",
+      "image": "https://i.postimg.cc/65PDwfWQ/ameena.png"
     },
     "team2": {
       "name": "Avanthika",
       "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
     },
     "team3": {
-      "name": "Imithiyas",
-      "image": "https://i.postimg.cc/Ss9DCvXg/imthyas.png"
+      "name": "Nandana K P",
+      "image": "https://i.postimg.cc/259ShHpL/nandana.png"
     },
     "team4": {
-      "name": "Nandana",
-      "image": "https://i.postimg.cc/259ShHpL/nandana.png"
+      "name": "Imthyas",
+      "image": "https://i.postimg.cc/4dbYR3pJ/imthyas.png"
     },
     "team5": {
       "name": "Sooraj",
-      "image": "https://i.postimg.cc/mkB27hZh/sooraj.png"
+      "image": "https://i.postimg.cc/3wtqSXc7/sooraj.png"
     },
     "team6": {
-      "name": "Sarfas",
-      "image": "https://wallpapers.com/images/hd/cartoon-goth-boy-beside-a-crow-pfp-3996xzafqwex8lsb.jpg"
+      "name": "Uvais",
+      "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
     },
     "team7": {
-      "name": "Ameena",
-      "image": "https://wallpapers.com/images/hd/cute-blushing-girl-cartoon-unique-cool-pfp-illustration-9we3b8ou2u1g87zh.jpg"
+      "name": "Navami BR",
+      "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
     },
     "team8": {
-      "name": "Uvais",
-      "image": "https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-p-0068-tx/oE0roAfQkfQBiHjvISATIZFEhh4xMLebDgHhC5~tplv-photomode-zoomcover:480:480.jpeg?lk3s=b59d6b55&nonce=41219&refresh_token=73386b72e8a1a8ea6209933513eaeec2&x-expires=1721286000&x-signature=eeiHPD5Bn3eSEQefQtP8Lzvba%2FA%3D&shp=b59d6b55&shcp=-"
+      "name": "Sarfas",
+      "image": "https://i.postimg.cc/ZY65g042/sarafas.png"
     }
   },
 
