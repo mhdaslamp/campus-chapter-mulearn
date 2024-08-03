@@ -74,66 +74,67 @@
   },
   
   "team": {
-    "staffAdvisor": {
+    "StaffAdvisor": {
       "name": "ANOOP S K M",
       "image": "https://i.postimg.cc/s1dkrzpC/enabler.png"
     },
-    "campusLead": {
+    "CampusLead": {
       "name": "RENY MATHEW",
       "image": "https://i.postimg.cc/sxPgbsLb/reny.png"
     },
-    "campusCoLead": { "name": "ASLAM", 
+    "CampusCoLead": 
+    { "name": "ASLAM", 
     "image": "https://i.postimg.cc/VLdYj9f3/aslam.png" },
 
-    "treasurer": {
+    "CreativeLead": {
       "name": "DIYA BETCY",
       "image": "https://i.postimg.cc/526CGFxz/diya.png"
     },
-    "technicalLead": {
+    "TechnicalLead": {
       "name": "ASNA KS",
       "image": "https://i.postimg.cc/9F6r0gdx/asna.png"
     },
-    "mediaLead": {
+    "MediaLead": {
       "name": "HANAN",
       "image": "https://i.postimg.cc/fT8LDFph/hanan-2.png"
     },
-    "contentLead": {
+    "DesignLead": {
       "name": "NANDANA VS",
       "image": "https://i.postimg.cc/nczvBWQp/nandana-vs.png"
     },
-    "operationLead": {
+    "TechTeam": {
       "name": "SHADIL",
       "image": "https://i.postimg.cc/5N4M3Bxx/shadil.png"
     },
-    "team1": {
+    "TechTeam": {
       "name": "AMEENA",
       "image": "https://i.postimg.cc/pXxdzj3k/ameena-2.png"
     },
-    "team2": {
+    "MediaTeam": {
       "name": "AVANTHIKA",
       "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
     },
-    "team3": {
+    "MediaTeam": {
       "name": "NANDANA K P",
       "image": "https://i.postimg.cc/259ShHpL/nandana.png"
     },
-    "team4": {
+    "DesignTeam": {
       "name": "IMTHYAS",
       "image": "https://i.postimg.cc/4dbYR3pJ/imthyas.png"
     },
-    "team5": {
+    "DesignTeam": {
       "name": "SOORAJ",
       "image": "https://i.postimg.cc/3wtqSXc7/sooraj.png"
     },
-    "team6": {
+    "IGLeasd(WEBDEV)": {
       "name": "UVAIS",
       "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
     },
-    "team7": {
+    "IGLeasd(UI/UX)": {
       "name": "NAVAMI BR",
       "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
     },
-    "team8": {
+    "IGLeasd(IOT)": {
       "name": "SARFAS",
       "image": "https://i.postimg.cc/ZY65g042/sarafas.png"
     }
