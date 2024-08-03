@@ -66,10 +66,10 @@
   },
 
   "statistics": {
-    "studentsCount": 538,
-    "learningCircles": 288,
+    "studentsCount": 545,
+    "learningCircles": 292,
     "InterestGroups": 3,
-    "karmaEarned": 231000,
+    "karmaEarned": 244000,
     "rank": 18
   },
   
@@ -102,39 +102,39 @@
       "name": "NANDANA VS",
       "image": "https://i.postimg.cc/nczvBWQp/nandana-vs.png"
     },
-    "TechTeam": {
+    "TechTeamI": {
       "name": "SHADIL",
       "image": "https://i.postimg.cc/5N4M3Bxx/shadil.png"
     },
-    "TechTeam": {
+    "TechTeamII": {
       "name": "AMEENA",
       "image": "https://i.postimg.cc/pXxdzj3k/ameena-2.png"
     },
-    "MediaTeam": {
+    "MediaTeamI": {
       "name": "AVANTHIKA",
       "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
     },
-    "MediaTeam": {
+    "MediaTeamII": {
       "name": "NANDANA K P",
       "image": "https://i.postimg.cc/259ShHpL/nandana.png"
     },
-    "DesignTeam": {
+    "DesignTeamI": {
       "name": "IMTHYAS",
       "image": "https://i.postimg.cc/4dbYR3pJ/imthyas.png"
     },
-    "DesignTeam": {
+    "DesignTeamII": {
       "name": "SOORAJ",
       "image": "https://i.postimg.cc/3wtqSXc7/sooraj.png"
     },
-    "IGLeasd(WEBDEV)": {
+    "IGLead(WEBDEV)": {
       "name": "UVAIS",
       "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
     },
-    "IGLeasd(UI/UX)": {
+    "IGLead(UI/UX)": {
       "name": "NAVAMI BR",
       "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
     },
-    "IGLeasd(IOT)": {
+    "IGLead(IOT)": {
       "name": "SARFAS",
       "image": "https://i.postimg.cc/ZY65g042/sarafas.png"
     }
