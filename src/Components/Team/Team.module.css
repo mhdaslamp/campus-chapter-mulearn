@@ -6,7 +6,7 @@
     /* gap: 100px; */
     width: 100%;
     min-height: 100vh;
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .teamWrapper h1 {
@@ -261,15 +261,15 @@
     }
     
     .team8 {
-        margin-top: 310px;
+        margin-top: 350px;
         
         top: 100%;
-        left: 77%;
+        left: 74%;
     }
     .team9 {
         margin-top: 90px;
         top: 100%;
-        right: 430%;
+        left: 4%;
     }
     
     .team10 {
@@ -374,20 +374,59 @@
     
     .team7 {
         margin-top: 650px;
-        left: 20%;
+        left: 4%;
     }
     
     .team8 {
-        margin-top: 640px;
+        margin-top: 660px;
         
-        left: 60%;
+        left: 37%;
     }
-    .team9, .team10, .team11, .team12 {
-        margin-top: 950px;
+    .team9 {
+        margin-top:-300px;
+        left: 155%;
     }
-    .team13, .team14, .team15, .team16 {
-        margin-top: 1300px;
+    
+    .team10 {
+        margin-top: 50px;
+        left: -160%;
     }
+    
+    .team11 {
+        margin-top: 50px;
+        left: 3%;
+    }
+    
+    .team12 {
+        margin-top: 50px;
+        
+        top: 100%;
+        left: 155%;
+    }
+    
+    .team13 {
+        margin-top: 480px;
+        
+        left: -160%;
+    }
+    
+    .team14 {
+        margin-top: 480px;
+        
+        left: 3%;
+    }
+    
+    .team15 {
+        margin-top: 480px;
+        left: 155%;
+    }
+    
+    .team16 {
+        margin-top: 840px;
+        
+        left: 3%;
+    }
+    
 }
 
 @media screen and (max-width: 900px) {
@@ -405,10 +444,10 @@
 
 @media screen and (max-width: 780px) {
     .teamBodyWrapper {
-        height: 105vh;
+        height: 165vh;
     }
     
-    .teamBgLineWrapper> :nth-child(3) {
+    .teamBgLineWrapper> :nth-child(4) {
         display: block;
     }
     
@@ -468,20 +507,58 @@
     
     .team7 {
         margin-top: 520px;
-        left: 20%;
+        left: 4%;
     }
     
     .team8 {
         margin-top: 530px;
         
-        left: 56%;
+        left: 36%;
     }
-    .team9, .team10, .team11, .team12 {
-        margin-top: 850px;
+    .team9 {
+        margin-top: -290px;
+        left: 120%;
     }
-    .team13, .team14, .team15, .team16 {
-        margin-top: 1200px;
+    
+    .team10 {
+        margin-top: -30px;
+        left: -115%;
     }
+    
+    .team11 {
+        margin-top: -20px;
+        left: 0%;
+    }
+    
+    .team12 {
+        margin-top: -20px;
+        
+        left: 120%;
+    }
+    
+    .team13 {
+        margin-top: 320px;
+        
+        left: -115%;
+    }
+    
+    .team14 {
+        margin-top: 320px;
+        
+        left: 0%;
+    }
+    
+    .team15 {
+        margin-top: 320px;
+        left: 120%;
+    }
+    
+    .team16 {
+        margin-top: 680px;
+        
+        left: 6%;
+    }
+    
 }
 
 @media screen and (max-width: 650px) {
@@ -490,10 +567,10 @@
     }
 
     .teamBodyWrapper {
-        height: 120vh;
+        height: 230vh;
     }
     
-    .teamBgLineWrapper> :nth-child(4) {
+    .teamBgLineWrapper> :nth-child(6) {
         display: block;
     }
     
@@ -557,15 +634,15 @@
         left: 60%;
     }
     .team9 {
-        margin-top: 940px;
-        left: 15%;
+        margin-top: 690px;
+        left: 60%;
     }
     .team10 {
-        margin-top: 930px;
+        margin-top: 30px;
         left: 60%;
     }
     .team11 {
-        margin-top: 1190px;
+        margin-top: 1000px;
         left: 15%;
     }
     .team12 {
@@ -592,23 +669,26 @@
 
 @media screen and (max-height: 600px) {
     .teamBodyWrapper {
-        height: 850px;
+        height: 1050px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .teamBodyWrapper {
+        height: 240vh;
+    }
     .team1 {
         margin-top: -120px;
         top: 0;
         left: 7%;
     }
-
+    
     .team2 {
         margin-top: -120px;
         top: 0%;
         left: 52%;
     }
-
+    
     .team3 {
         margin-top: 130px;
         top: 0;
@@ -632,79 +712,169 @@
 
         left: 51%;
     }
-
+    
     .team7 {
         margin-top: 650px;
         left: 7%;
     }
-
+    
     .team8 {
         margin-top: 650px;
-
+        
         left: 52%;
+    }
+    .team9 {
+        margin-top: 220px;
+        top:0;
+        left: -118%;
+    }
+    
+    .team10 {
+        margin-top: 220px;
+        top: 0%;
+        left: -2%;
+    }
+    
+     .team11 {
+        margin-top: 530px;
+        top: 0;
+        left: -118%;
+    }
+    
+    .team12 {
+        margin-top: 220px;
+        
+        left: -2%;
+    }
+    
+    .team13 {
+        margin-top: 450px;
+        
+        left: -110%;
+    }
+    
+    .team14 {
+        margin-top: 450px;
+        
+        left: -2%;
+    }
+    
+    .team15 {
+        margin-top: 680px;
+        left: -110%;
+    }
+    
+    .team16 {
+        margin-top: 680px;
+        
+        left: -2%;
     }
 }
 
 @media screen and (max-width: 380px) {
     .teamBodyWrapper {
-        height: 115vh;
+        height: 60vh;
     }
 
+    
     .teamImageIndividual {
         height: 8.5rem;
         width: 8.5rem;
     }
-
+    
     .teamMemberName {
         font-size: 0.9rem;
     }
-
+    
     .team {
         width: 9rem;
     }
-
+    
     .team1 {
         margin-top: -130px;
         left: 7%;
     }
-
+    
     .team2 {
         margin-top: -140px;
         left: 51%;
     }
-
+    
     .team3 {
         margin-top: 120px;
         left: 8%;
     }
-
+    
     .team4 {
         margin-top: 130px;
         
         left: 52%;
     }
-
+    
     .team5 {
         margin-top: 380px;
-
+        
         left: 7%;
     }
-
+    
     .team6 {
         margin-top: 370px;
-
+        
         left: 51%;
     }
-
+    
     .team7 {
         margin-top: 620px;
         left: 8%;
     }
-
+    
     .team8 {
         margin-top: 630px;
         
         left: 52%;
+    }
+    .team9 {
+        margin-top: 280px;
+        right: 3%;
+    }
+    
+    .team10 {
+        margin-top: 280px;
+        left: 5%;
+    }
+    
+    .team11 {
+        margin-top: 520px;
+        right: 8%;
+    }
+    
+    .team12 {
+        margin-top: 180px;
+        
+        left: 5%;
+    }
+    
+    .team13 {
+        margin-top: 430px;
+        
+        right: 7%;
+    }
+    
+    .team14 {
+        margin-top: 430px;
+        
+        left: 5%;
+    }
+    
+    .team15 {
+        margin-top: 680px;
+        right: 8%;
+    }
+    
+    .team16 {
+        margin-top: 680px;
+        
+        left: 5%;
     }
 }
 
@@ -722,12 +892,12 @@
 
 @media screen and (max-width: 500px) and (max-height: 800px) {
     .teamBodyWrapper {
-        min-height: 970px;
+        min-height: 1970px;
     }
 }
 
 @media screen and (max-width: 400px) and (max-height: 800px) {
     .teamBodyWrapper {
-        min-height: 920px;
+        min-height: 1320px;
     }
 }
