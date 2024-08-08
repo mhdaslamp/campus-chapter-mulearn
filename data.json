@@ -7,11 +7,11 @@
 
   "events": [
     {
-      "month": "August",
+      "month": "Aug",
       "date": "9",
       "head": "µPy",
       "para": "A basic python course using snakify",
-      "img": "src/assets/images/py.png"
+      "img": "https://i.postimg.cc/Kz18wQNy/py.jpg"
     },
     {
       "month": "july",
@@ -27,19 +27,38 @@
       "para": "Discover the Future of Electric Vehicles and Industries in India!",
       "img": "https://i.postimg.cc/vBcd9qyJ/Whats-App-Image-2024-07-17-at-12-32-46-4e202e01.jpg"
     },
+
     {
-      "month": "jan",
-      "date": "1",
+      "month": "Mar",
+      "date": "25",
       "head": "Karmayugam",
-      "para": "Thank you all for your incredible spirit and dedication. Until next time, keep shining and spreading positivity. 🚀",
-      "img": "https://i.postimg.cc/Rh7Q6Txn/Whats-App-Image-2024-05-19-at-19-09-32-007bec2c.jpg"
+      "para": "The Karma Marathon was an exhilarating interdepartmental battle organized with the aim of fostering team spirit and healthy competition among participants.",
+      "img": "https://i.postimg.cc/pd80CtNN/karamayugam.jpg"
     },
+
+
     {
-      "month": "Sep",
-      "date": "26",
-      "head": "launchpad",
-      "para": "Ready.. set.. go! 🚀.",
-      "img": "https://i.postimg.cc/yxGsw2NF/Whats-App-Image-2024-07-11-at-19-58-41-679e4191.jpg"
+      "month": "Feb",
+      "date": "17",
+      "head": "online python workshop",
+      "para": "µLearn GECSKP and µLearn MITS collaborated to organize an engaging Python online hands-on workshop tailored for beginners",
+      "img": "https://i.postimg.cc/wxkGnH1g/python.jpg"
+    },
+    
+    {
+      "month": "Feb",
+      "date": "13",
+      "head": "Code Karma",
+      "para": "The Code Karma event, organized by µLearn GECSKP, was a transformative 30-day coding challenge designed to enhance participants' programming skills and foster aculture of continuous learning",
+      "img": "https://i.postimg.cc/Y0SfJ5PC/code.jpg"
+    },
+
+    {
+      "month": "Nov",
+      "date": "6",
+      "head": "MuStory",
+      "para": "This event showcased a video presentation highlighting Aami's remarkable story of overcoming challenges and transforming her life through µLearn",
+      "img": "https://i.postimg.cc/ZK2FMDxJ/story.jpg"
     },
     {
       "month": "Sep",
@@ -47,13 +66,6 @@
       "head": "Art of Teaching 3.0",
       "para": "Recognize and celebrate outstanding educators with our unique platform",
       "img": "https://i.postimg.cc/LXn1LKGP/Whats-App-Image-2024-07-14-at-20-31-27-e3e58ea7.jpg"
-    },
-    {
-      "month": "Sep",
-      "date": "25",
-      "head": "Film Club",
-      "para": "Hey Film Enthusiast!",
-      "img": "https://i.postimg.cc/63cBWyML/Whats-App-Image-2024-07-03-at-19-35-16-2f8b5290.jpg"
     }
   ],
 
