@@ -7,6 +7,13 @@
 
   "events": [
     {
+      "month": "August",
+      "date": "9",
+      "head": "µPy",
+      "para": "A basic python course using snakify",
+      "img": "src/assets/images/py.png"
+    },
+    {
       "month": "july",
       "date": "24",
       "head": "Salt Mango Tree",
