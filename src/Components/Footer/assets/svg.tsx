@@ -62,3 +62,22 @@ export const Youtube = () => {
     </svg>
   );
 };
+
+export const twitter = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M3 3L21 21M3 21L21 3"
+        stroke="#EBD7FF"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  );
+};
