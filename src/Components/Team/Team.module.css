@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px; /* Adjust as needed */
-    padding: 20px;
+    padding: 0px;
     position: relative;
     z-index: 1;
 }

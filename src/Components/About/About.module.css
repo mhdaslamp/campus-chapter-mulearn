@@ -31,6 +31,8 @@
   .AboutWrapper {
     gap: 15px;
     padding: 3vh 5%;
+    height: 9cm;
+    
   }
 
   .AboutWrapper h1 {

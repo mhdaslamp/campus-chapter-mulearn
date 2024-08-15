@@ -36,6 +36,7 @@
 .card .content {
   display: flex;
   align-items: center;
+  width: 700px;
 }
 
 .card .date,
@@ -162,6 +163,7 @@
 
   .card {
     padding: 5px 10px;
+    width: 85%;
   }
 
   .card .date {
