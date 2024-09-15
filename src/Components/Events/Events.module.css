@@ -37,7 +37,8 @@
 .card .content {
   display: flex;
   align-items: center;
-  width: 700px;
+  width: 95%;
+
 }
 
 .card .date,
@@ -91,7 +92,7 @@
 
 .card.small {
   border-radius: 1rem;
-  max-width: 700px;
+  width: 95%;
 }
 
 .card.small .text {
@@ -109,6 +110,7 @@
   flex-direction: column;
   gap: .5rem;
   justify-content: space-between;
+  
 }
 
 @media (max-width: 1050px) {
