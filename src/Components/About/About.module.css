@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   gap: 25px;
-  padding: 5vh 5%;
+  padding: 1.7cm 5%;
   width: 100%;
 }
 
@@ -30,7 +30,7 @@
 @media screen and (max-width: 670px) {
   .AboutWrapper {
     gap: 15px;
-    padding: 3vh 5%;
+    padding: 10vh 3vh 5%;
   }
 
   .AboutWrapper h1 {
