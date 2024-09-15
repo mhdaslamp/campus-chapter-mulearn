@@ -5,6 +5,7 @@
   width: 100%;
   padding: 5vh 10vw;
   gap: 25px;
+  padding-top: 1.7cm;
   background-color: #ffffff; /* Add a background color to ensure it covers the team section */
 }
 
@@ -120,9 +121,7 @@
 
 @media screen and (max-width: 820px) {
   .ConnectWrapper {
-    padding: 8vh 6vw 5vh;
-  
-
+    padding: 10vh 6vw 5vh;
   }
 
   .innerContent h2 {

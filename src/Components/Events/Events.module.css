@@ -31,12 +31,13 @@
   box-shadow: 0px 0px 24.0251px 0px rgba(0, 0, 0, 0.1);
   padding: 10px 10px;
   margin-bottom: .5rem;
+ 
 }
 
 .card .content {
   display: flex;
   align-items: center;
-  width: 700px;
+  width: 95%;
 }
 
 .card .date,
@@ -90,7 +91,7 @@
 
 .card.small {
   border-radius: 1rem;
-  max-width: 700px;
+  width: 95%;
 }
 
 .card.small .text {
@@ -108,6 +109,7 @@
   flex-direction: column;
   gap: .5rem;
   justify-content: space-between;
+  
 }
 
 @media (max-width: 1050px) {
