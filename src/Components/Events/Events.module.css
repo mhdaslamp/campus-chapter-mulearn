@@ -1,5 +1,4 @@
 .events {
-  max-height: 1050px;
   width: 100%;
   padding: 0rem 2rem;
   display: flex;
@@ -11,9 +10,52 @@
 .events h2 {
   text-align: center;
   align-self: center;
-
   color: #ae59ff;
   font-size: 2rem;
+}
+
+/* Year selection styles */
+.yearScroll {
+  position: relative; 
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.yearButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.yearButtons::-webkit-scrollbar {
+  display: none;
+}
+
+.yearButton {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  min-width: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.yearButton.active {
+  background-color: #ae59ff;
+  color: white;
+}
+
+.yearButton:not(.active) {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.yearButton:not(.active):hover {
+  background-color: #e5e7eb;
 }
 
 .innerDiv {
@@ -31,7 +73,6 @@
   box-shadow: 0px 0px 24.0251px 0px rgba(0, 0, 0, 0.1);
   padding: 10px 10px;
   margin-bottom: .5rem;
- 
 }
 
 .card .content {
@@ -73,8 +114,7 @@
 }
 
 .card.large img {
-  /* height: 400px; */
-  height: 100%;
+  height: 400px;
   width: 100%;
   border-radius: 1rem;
   object-fit: contain;
@@ -109,26 +149,21 @@
   flex-direction: column;
   gap: .5rem;
   justify-content: space-between;
-  
 }
 
 @media (max-width: 1050px) {
   .card .date {
     font-size: 23px;
   }
-
   .card .text {
     font-size: 15px;
   }
-
   .card.large img {
     height: 360px;
   }
-
   .card img {
     height: 90px;
   }
-
   .subContent {
     height: 100%;
   }
@@ -138,18 +173,18 @@
   .events {
     max-height: none;
   }
-
   .innerDiv {
     flex-direction: column;
   }
-
   .card.large {
     max-width: 400px;
     width: 100%;
   }
-
   .card.small {
     max-width: 550px;
+  }
+  .yearScroll {
+    padding: 0 0.5rem;
   }
 }
 
@@ -157,42 +192,40 @@
   .events {
     padding: 0rem 10px;
   }
-
   .card.large img {
     height: auto;
     width: 100%;
   }
-
   .card {
     padding: 5px 10px;
     width: 85%;
   }
-
   .card .date {
     font-size: 23px;
   }
-
   .card .text strong {
     font-size: .9rem;
     margin-bottom: .1rem;
   }
-
   .card.large .text span,
   .card.small .text span {
     font-size: .75rem;
     margin-top: .1rem;
   }
-
   .card img {
     height: 70px;
   }
+  .yearButton {
+    min-width: 80px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
-@media(width<345px){
+@media(width < 345px) {
   .card .text strong {
     font-size: .6rem;
   }
-
   .card.large .text span,
   .card.small .text span {
     font-size: .55rem;
