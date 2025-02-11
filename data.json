@@ -117,73 +117,80 @@
   },
   
   "team": {
-    "StaffAdvisor": {
+    "CampusEnabler": {
       "name": "ANOOP S K M",
       "image": "https://i.postimg.cc/s1dkrzpC/enabler.png"
     },
     "CampusLead": {
-      "name": "RENY MATHEW",
-      "image": "https://i.postimg.cc/sxPgbsLb/reny.png"
+      "name": "ASLAM",
+      "image": "https://i.postimg.cc/VLdYj9f3/aslam.png"
     },
-    "CampusCoLead": 
-    { "name": "ASLAM", 
-    "image": "https://i.postimg.cc/VLdYj9f3/aslam.png" },
+    "CampusCoLead1": 
+    { "name": "FAHAD", 
+    "image": "" },
+    "CampusCoLead2": 
+    { "name": "GOPIKA", 
+    "image": "" },
 
     "CreativeLead": {
-      "name": "DIYA BETCY",
-      "image": "https://i.postimg.cc/526CGFxz/diya.png"
+      "name": "FADEELA",
+      "image": ""
     },
     "TechnicalLead": {
-      "name": "ASNA KS",
-      "image": "https://i.postimg.cc/9F6r0gdx/asna.png"
+      "name": "AYSHA",
+      "image": ""
     },
     "MediaLead": {
-      "name": "HANAN",
-      "image": "https://i.postimg.cc/fT8LDFph/hanan-2.png"
-    },
-    "DesignLead": {
-      "name": "NANDANA VS",
-      "image": "https://i.postimg.cc/nczvBWQp/nandana-vs.png"
-    },
-    "TechTeamI": {
-      "name": "SHADIL",
-      "image": "https://i.postimg.cc/5N4M3Bxx/shadil.png"
-    },
-    "TechTeamII": {
-      "name": "AMEENA",
-      "image": "https://i.postimg.cc/pXxdzj3k/ameena-2.png"
-    },
-    "MediaTeamI": {
       "name": "AVANTHIKA",
       "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
     },
-    "MediaTeamII": {
-      "name": "NANDANA K P",
-      "image": "https://i.postimg.cc/259ShHpL/nandana.png"
-    },
-    "DesignTeamI": {
-      "name": "IMTHYAS",
-      "image": "https://i.postimg.cc/4dbYR3pJ/imthyas.png"
-    },
-    "DesignTeamII": {
-      "name": "SOORAJ",
-      "image": "https://i.postimg.cc/3wtqSXc7/sooraj.png"
-    },
-    "IGLead(WebDev)": {
-      "name": "UVAIS",
-      "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
-    },
-    "IGLead(UI/UX)": {
+    "DesignLead": {
       "name": "NAVAMI BR",
       "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
     },
-    "IGLead(IOT)": {
-      "name": "SARFAS",
-      "image": "https://i.postimg.cc/ZY65g042/sarafas.png"
+    "TechTeam1": {
+      "name": "ANUPAMA",
+      "image": ""
     },
-    "µPlayRep": {
-      "name": "Musthaq",
-      "image": "https://i.postimg.cc/0jFd2ZbP/musthaq.png"
+    "TechTeam2": {
+      "name": "UVAIS",
+      "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
+    },
+    "TechTeam3": {
+      "name": "AISWARYA",
+      "image": ""
+    },
+    "MediaTeam1": {
+      "name": "ATHUL",
+      "image": ""
+    },
+    "MediaTeam2": {
+      "name": "ATHULYA",
+      "image": ""
+    },
+    "MediaTeam3": {
+      "name": "FIDHA",
+      "image": ""
+    },
+    "DesignTeam1": {
+      "name": "FAHAD MK",
+      "image": ""
+    },
+    "DesignTeam2": {
+      "name": "SANJANA",
+      "image": ""
+    },
+    "IGLead(WebDev)": {
+      "name": "SABARI",
+      "image": ""
+    },
+    "IGLead(UI/UX)": {
+      "name": "RONNIE",
+      "image": ""
+    },
+    "IGLead(IOT)": {
+      "name": "VIGNESH",
+      "image": ""
     }
 
 

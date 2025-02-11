@@ -31,7 +31,7 @@ const Team = () => {
                 <div className={styles.teamMemberDesignation}>
                   {key.includes("null")
                     ? "Team Member"
-                    : key.replace(/([A-Z])/g, " $1").trim()}
+                    : key.replace(/([A-Z,1-9])/g, " $1").trim()}
                 </div>
               </div>
             </div>
