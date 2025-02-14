@@ -133,11 +133,11 @@
   },
 
   "statistics": {
-    "studentsCount": 552,
-    "learningCircles": 241,
+    "studentsCount": 712,
+    "activeMembers": 202,
     "InterestGroups": 3,
-    "karmaEarned": 255000,
-    "rank": 18
+    "karmaEarned": 30000,
+    "rank": 14
   },
   
   "team": {
