@@ -6,6 +6,7 @@
   "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT)as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking.In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision..",
 
   "events": [
+  
     {
       "month": "Aug",
       "date": "9",
@@ -103,78 +104,85 @@
     "rank": 18
   },
   
-  "team": {
-    "StaffAdvisor": {
+ "team": {
+    "CampusEnabler": {
       "name": "ANOOP S K M",
-      "image": "https://i.postimg.cc/s1dkrzpC/enabler.png"
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
     },
     "CampusLead": {
-      "name": "RENY MATHEW",
-      "image": "https://i.postimg.cc/sxPgbsLb/reny.png"
+      "name": "ASLAM",
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
     },
-    "CampusCoLead": 
-    { "name": "ASLAM", 
-    "image": "https://i.postimg.cc/VLdYj9f3/aslam.png" },
-
+    "CampusCoLead1": { 
+      "name": "FAHAD", 
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png" 
+    },
+    "CampusCoLead2": { 
+      "name": "GOPIKA", 
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png" 
+    },
     "CreativeLead": {
-      "name": "DIYA BETCY",
-      "image": "https://i.postimg.cc/526CGFxz/diya.png"
+      "name": "FADEELA",
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png"
     },
     "TechnicalLead": {
-      "name": "ASNA KS",
-      "image": "https://i.postimg.cc/9F6r0gdx/asna.png"
+      "name": "AYSHA",
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png"
     },
     "MediaLead": {
-      "name": "HANAN",
-      "image": "https://i.postimg.cc/fT8LDFph/hanan-2.png"
+      "name": "AVANTHIKA",
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png"
     },
     "DesignLead": {
-      "name": "NANDANA VS",
-      "image": "https://i.postimg.cc/nczvBWQp/nandana-vs.png"
+      "name": "NAVAMI BR",
+      "image": "https://i.postimg.cc/G852gXNh/navami.png"
     },
-    "TechTeamI": {
-      "name": "SHADIL",
-      "image": "https://i.postimg.cc/5N4M3Bxx/shadil.png"
+    "TechTeam1": {
+      "name": "ANUPAMA",
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png"
     },
-    "TechTeamII": {
-      "name": "AMEENA",
-      "image": "https://i.postimg.cc/pXxdzj3k/ameena-2.png"
+    "TechTeam2": {
+      "name": "UVAIS",
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png"
     },
-    "MediaTeamI": {
-      "name": "AVANTHIKA",
-      "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
+    "TechTeam3": {
+      "name": "AISWARYA",
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png"
     },
-    "MediaTeamII": {
-      "name": "NANDANA K P",
-      "image": "https://i.postimg.cc/259ShHpL/nandana.png"
+    "MediaTeam1": {
+      "name": "ATHUL",
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png"
     },
-    "DesignTeamI": {
-      "name": "IMTHYAS",
-      "image": "https://i.postimg.cc/4dbYR3pJ/imthyas.png"
+    "MediaTeam2": {
+      "name": "ATHULYA",
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png"
     },
-    "DesignTeamII": {
-      "name": "SOORAJ",
-      "image": "https://i.postimg.cc/3wtqSXc7/sooraj.png"
+    "MediaTeam3": {
+      "name": "FIDHA",
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png"
+    },
+    "DesignTeam1": {
+      "name": "FAHAD MK",
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png"
+    },
+    "DesignTeam2": {
+      "name": "SANJANA",
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png"
     },
     "IGLead(WebDev)": {
-      "name": "UVAIS",
-      "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
+      "name": "SABARI",
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png"
     },
     "IGLead(UI/UX)": {
-      "name": "NAVAMI BR",
-      "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
+      "name": "RONNIE",
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png"
     },
     "IGLead(IOT)": {
-      "name": "SARFAS",
-      "image": "https://i.postimg.cc/ZY65g042/sarafas.png"
-    },
-    "µPlayRep": {
-      "name": "Musthaq",
-      "image": "https://i.postimg.cc/0jFd2ZbP/musthaq.png"
+      "name": "VIGNESH",
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
     }
+},
 
-
-  },
 
   "discordLink": "https://discord.gg/8ga5EEmAcy",
 
