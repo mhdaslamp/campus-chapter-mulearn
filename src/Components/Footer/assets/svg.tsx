@@ -30,6 +30,7 @@ export const Instagram = () => {
     </svg>
   );
 };
+
 export const X = () => {
   return (
     <svg
@@ -46,6 +47,7 @@ export const X = () => {
     </svg>
   );
 };
+
 export const Youtube = () => {
   return (
     <svg
@@ -58,25 +60,6 @@ export const Youtube = () => {
       <path
         d="M23.498 6.186a2.997 2.997 0 00-2.106-2.113C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.392.573A2.997 2.997 0 00.502 6.186C.001 8.092 0 12 0 12s.001 3.908.502 5.814a2.997 2.997 0 002.106 2.113C4.4 20.5 12 20.5 12 20.5s7.6 0 9.392-.573a2.997 2.997 0 002.106-2.113C23.999 15.908 24 12 24 12s-.001-3.908-.502-5.814zM9.751 15.019V8.982L15.985 12l-6.234 3.019z"
         fill="#EBD7FF"
-      />
-    </svg>
-  );
-};
-
-export const twitter = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-    >
-      <path
-        d="M3 3L21 21M3 21L21 3"
-        stroke="#EBD7FF"
-        stroke-width="2"
-        stroke-linecap="round"
       />
     </svg>
   );

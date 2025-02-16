@@ -52,6 +52,7 @@
   .contentWrapper {
     min-width: 300px;
     gap: 2vh;
+  
   }
 
   .contentWrapper h1 {
@@ -74,6 +75,7 @@
 
   .contentWrapper {
     width: 100%;
+
   }
 
   .contentWrapper p {
