@@ -6,6 +6,7 @@
   "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT)as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking.In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision..",
 
   "events": [
+  
     {
       "year": 2025,
       "eventDetails": [
@@ -140,85 +141,88 @@
     "rank": 14
   },
   
-  "team": {
+
+ "team": {
+
     "CampusEnabler": {
       "name": "ANOOP S K M",
-      "image": "https://i.postimg.cc/s1dkrzpC/enabler.png"
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
     },
     "CampusLead": {
       "name": "ASLAM",
-      "image": "https://i.postimg.cc/VLdYj9f3/aslam.png"
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
     },
-    "CampusCoLead1": 
-    { "name": "FAHAD", 
-    "image": "" },
-    "CampusCoLead2": 
-    { "name": "GOPIKA", 
-    "image": "" },
-
+    "CampusCoLead1": { 
+      "name": "FAHAD", 
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png" 
+    },
+    "CampusCoLead2": { 
+      "name": "GOPIKA", 
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png" 
+    },
     "CreativeLead": {
       "name": "FADEELA",
-      "image": ""
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png"
     },
     "TechnicalLead": {
       "name": "AYSHA",
-      "image": ""
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png"
     },
     "MediaLead": {
       "name": "AVANTHIKA",
-      "image": "https://i.postimg.cc/7ZB76nLb/avanthika.png"
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png"
     },
     "DesignLead": {
       "name": "NAVAMI BR",
-      "image": "https://i.postimg.cc/c4DXNxcM/navami.png"
+      "image": "https://i.postimg.cc/G852gXNh/navami.png"
     },
     "TechTeam1": {
       "name": "ANUPAMA",
-      "image": ""
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png"
     },
     "TechTeam2": {
       "name": "UVAIS",
-      "image": "https://i.postimg.cc/hG4DQ0mq/uvais.png"
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png"
     },
     "TechTeam3": {
       "name": "AISWARYA",
-      "image": ""
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png"
     },
     "MediaTeam1": {
       "name": "ATHUL",
-      "image": ""
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png"
     },
     "MediaTeam2": {
       "name": "ATHULYA",
-      "image": ""
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png"
     },
     "MediaTeam3": {
       "name": "FIDHA",
-      "image": ""
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png"
     },
     "DesignTeam1": {
       "name": "FAHAD MK",
-      "image": ""
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png"
     },
     "DesignTeam2": {
       "name": "SANJANA",
-      "image": ""
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png"
     },
     "IGLead(WebDev)": {
       "name": "SABARI",
-      "image": ""
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png"
     },
     "IGLead(UI/UX)": {
       "name": "RONNIE",
-      "image": ""
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png"
     },
     "IGLead(IOT)": {
       "name": "VIGNESH",
-      "image": ""
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
+  
     }
+},
 
-
-  },
 
 
   "discordLink": "https://discord.gg/8ga5EEmAcy",
