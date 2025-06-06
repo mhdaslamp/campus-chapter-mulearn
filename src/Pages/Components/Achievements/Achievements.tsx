@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Achievements.module.css";
-import data from "../../../data.json";
+import data from "../../../../data.json";
 import Marquee from "react-fast-marquee";
 
 export interface AchievementDetails {

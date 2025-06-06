@@ -1,9 +1,9 @@
 import styles from "./Navbar.module.css";
 import { useEffect, useState } from "react";
-import { ULearn } from "../../assets/svg/svg";
+import { ULearn } from "../../../assets/svg/svg.tsx";
 import { useReactPath } from "./path.hook.ts";
 import { AiOutlineMenu } from "react-icons/ai";
-import data from "../../../data.json";
+import data from "../../../../data.json";
 
 const Navbar = () => {
   const [openmenu, setopenmenu] = useState(false);
@@ -12,14 +12,7 @@ const Navbar = () => {
     setopenmenu(!openmenu);
   }
   const path = useReactPath();
-  const navContent = [
-    "home",
-    "about",
-    "achievements",
-    "gallery",
-    "team",
-    "contact",
-  ];
+  const navContent = ["home", "about", "achievements", "events", "contact"];
   useEffect(() => {}, [path]);
   const changeNavBg = () => {
     window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
@@ -47,7 +40,7 @@ const Navbar = () => {
       <div className={styles.navbarRight}>
         <div>
           {navContent.map((content, i) => (
-            <a href={`#${content}`} key={i.toString() + content}>
+            <a href={`/#${content}`} key={i.toString() + content}>
               <p
                 style={{
                   borderBottom: window.location.href.includes(`#${content}`)
@@ -77,10 +70,15 @@ const Navbar = () => {
         {openmenu && (
           <div>
             {navContent.map((content, i) => (
-              <a href={`#${content}`} key={i.toString() + content}>
+              <a
+                href={content == "events" ? "/events" : `/#${content}`}
+                key={i.toString() + content}
+              >
                 <p
                   style={{
-                    borderBottom: window.location.href.includes(`#${content}`)
+                    borderBottom: window.location.href.includes(
+                      content == "events" ? "/events" : `#${content}`,
+                    )
                       ? "4px solid #B3B3FF"
                       : "",
                     height: "18px",
@@ -90,6 +88,7 @@ const Navbar = () => {
                 </p>
               </a>
             ))}
+
             <button>
               <a href="http://app.mulearn.org">Join µlearn</a>
             </button>
