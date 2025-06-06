@@ -8,12 +8,36 @@ import data from "../../../data.json";
 const Navbar = () => {
   const [openmenu, setopenmenu] = useState(false);
   const [navbg, setNavBg] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
   function openMenu() {
     setopenmenu(!openmenu);
   }
+
   const path = useReactPath();
   const navContent = ["home", "about", "events", "gallery", "team", "contact"];
-  useEffect(() => {}, [path]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
+      
+      // Find current section in view
+      const sections = navContent.map(section => document.getElementById(section));
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(navContent[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [navContent]);
+
   const changeNavBg = () => {
     window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
   };
@@ -24,6 +48,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", changeNavBg);
     };
   }, []);
+
   return (
     <div
       className={styles.navbarWrapper}
@@ -40,19 +65,48 @@ const Navbar = () => {
       <div className={styles.navbarRight}>
         <div>
           {navContent.map((content, i) => (
-            <a href={`#${content}`} key={i.toString() + content}>
-              <p
+            <a 
+              href={`#${content}`} 
+              key={i.toString() + content}
+              style={{
+                display: "inline-block",
+                padding: "0 4px",
+                marginBottom: "4px"
+              }}
+            >
+              <div
                 style={{
-                  borderBottom: window.location.href.includes(`#${content}`)
-                    ? "4px solid #B3B3FF"
-                    : "",
-                  height: "18px",
-                  fontSize: "18px",
-                  fontWeight: 600,
+                  position: "relative",
+                  height: "22px",
+                  display: "flex",
+                  alignItems: "center"
                 }}
               >
-                {content}
-              </p>
+                <p
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    color: activeSection === content ? "#ae59ff" : "inherit",
+                    transition: "all 0.3s ease",
+                    margin: 0
+                  }}
+                >
+                  {content}
+                </p>
+                {activeSection === content && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "-4px",
+                      left: 0,
+                      width: "100%",
+                      height: "4px",
+                      backgroundColor: "#ae59ff",
+                      borderRadius: "2px"
+                    }}
+                  />
+                )}
+              </div>
             </a>
           ))}
         </div>
@@ -70,17 +124,47 @@ const Navbar = () => {
         {openmenu && (
           <div>
             {navContent.map((content, i) => (
-              <a href={`#${content}`} key={i.toString() + content}>
-                <p
+              <a 
+                href={`#${content}`} 
+                key={i.toString() + content}
+                style={{
+                  display: "block",
+                  padding: "8px 4px",
+                  marginBottom: "4px"
+                }}
+              >
+                <div
                   style={{
-                    borderBottom: window.location.href.includes(`#${content}`)
-                      ? "4px solid #B3B3FF"
-                      : "",
-                    height: "18px",
+                    position: "relative",
+                    height: "22px",
+                    display: "flex",
+                    alignItems: "center"
                   }}
                 >
-                  {content}
-                </p>
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      color: activeSection === content ? "#ae59ff" : "inherit",
+                      transition: "all 0.3s ease",
+                      margin: 0
+                    }}
+                  >
+                    {content}
+                  </p>
+                  {activeSection === content && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "-4px",
+                        left: 0,
+                        width: "100%",
+                        height: "4px",
+                        backgroundColor: "#ae59ff",
+                        borderRadius: "2px"
+                      }}
+                    />
+                  )}
+                </div>
               </a>
             ))}
             <button>

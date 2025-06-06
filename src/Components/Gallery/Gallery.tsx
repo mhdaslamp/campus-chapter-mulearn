@@ -35,7 +35,7 @@ const Gallery = () => {
             </div>
             <div className={styles.viewAllContainer}>
                 <a 
-                    href="#gallery" 
+                    href="/gallery" 
                     className={styles.viewAllButton}
                 >
                     View All Gallery
