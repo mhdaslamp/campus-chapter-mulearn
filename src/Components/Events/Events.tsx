@@ -39,7 +39,7 @@ const Events: React.FC<EventsProps> = ({ defaultYear }) => {
   )?.eventDetails || [];
 
   return (
-    <div className={styles.events}>
+    <div className={styles.events} id="events">
       <h2>Our Event Journey</h2>
 
       <div className={styles.yearScroll}>
@@ -97,6 +97,15 @@ const Events: React.FC<EventsProps> = ({ defaultYear }) => {
             </div>
           </>
         )}
+      </div>
+
+      <div className={styles.viewAllContainer}>
+        <a 
+          href="/events" 
+          className={styles.viewAllButton}
+        >
+          View All Events
+        </a>
       </div>
     </div>
   );

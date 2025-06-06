@@ -13,9 +13,9 @@ const Gallery = () => {
             <h2>Memories</h2>
             <div className={styles.row}>
                 <Marquee {...marqParams} style={{ width: "100vw" }}>
-                    {data.gallery.row1.map((src) => (
-                        <div className={styles.imgContainer}>
-                            <img src={src.image} loading="lazy" />
+                    {data.gallery.row1.map((src, index) => (
+                        <div key={index} className={styles.imgContainer}>
+                            <img src={src.image} loading="lazy" alt={`Gallery image ${index + 1}`} />
                         </div>
                     ))}
                 </Marquee>
@@ -26,12 +26,20 @@ const Gallery = () => {
                     {...marqParams}
                     style={{ width: "100vw" }}
                 >
-                    {data.gallery.row2.map((src) => (
-                        <div className={styles.imgContainer}>
-                            <img src={src.image} loading="lazy" />
+                    {data.gallery.row2.map((src, index) => (
+                        <div key={index} className={styles.imgContainer}>
+                            <img src={src.image} loading="lazy" alt={`Gallery image ${index + 1}`} />
                         </div>
                     ))}
                 </Marquee>
+            </div>
+            <div className={styles.viewAllContainer}>
+                <a 
+                    href="#gallery" 
+                    className={styles.viewAllButton}
+                >
+                    View All Gallery
+                </a>
             </div>
         </div>
     );

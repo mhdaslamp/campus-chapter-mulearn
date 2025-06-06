@@ -21,6 +21,21 @@
   font-size: 1.2rem;
 }
 
+.readMoreLink {
+  color: #ae59ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.readMoreLink:hover {
+  color: #9042EB;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 900px) {
   .AboutWrapper p {
     font-size: 17px;
