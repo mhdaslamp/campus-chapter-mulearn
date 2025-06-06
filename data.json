@@ -6,7 +6,6 @@
   "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT)as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking.In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision..",
 
   "events": [
-  
     {
       "year": 2025,
       "eventDetails": [
@@ -50,7 +49,7 @@
           "para": "Discover the Future of Electric Vehicles and Industries in India!",
           "img": "https://i.postimg.cc/vBcd9qyJ/Whats-App-Image-2024-07-17-at-12-32-46-4e202e01.jpg"
         },
-    
+
         {
           "month": "Mar",
           "date": "25",
@@ -65,7 +64,7 @@
           "para": "µLearn GECSKP and µLearn MITS collaborated to organize an engaging Python online hands-on workshop tailored for beginners",
           "img": "https://i.postimg.cc/wxkGnH1g/python.jpg"
         },
-        
+
         {
           "month": "Feb",
           "date": "13",
@@ -129,21 +128,20 @@
       {
         "image": "https://i.postimg.cc/Qxyvm4x5/Typing-warriors-rejoice-We-re-thrilled-to-announce-that-the-30-day-Typing-Challenge-has-come-to.jpg"
       }
-      
     ]
   },
+
+  "achievements": [],
 
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
     "InterestGroups": 3,
-    "karmaEarned": 300000,
+    "karmaEarned": 360000,
     "rank": 14
   },
-  
 
- "team": {
-
+  "team": {
     "CampusEnabler": {
       "name": "ANOOP S K M",
       "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
@@ -152,13 +150,13 @@
       "name": "ASLAM",
       "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
     },
-    "CampusCoLead1": { 
-      "name": "FAHAD", 
-      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png" 
+    "CampusCoLead1": {
+      "name": "FAHAD",
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png"
     },
-    "CampusCoLead2": { 
-      "name": "GOPIKA", 
-      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png" 
+    "CampusCoLead2": {
+      "name": "GOPIKA",
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png"
     },
     "CreativeLead": {
       "name": "FADEELA",
@@ -219,14 +217,9 @@
     "IGLead(IOT)": {
       "name": "VIGNESH",
       "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
-  
     }
-},
-
-
-
+  },
   "discordLink": "https://discord.gg/8ga5EEmAcy",
-
 
   "whatsAppLink": "https://chat.whatsapp.com/FvoLhftysm04LdsYt2S5Zt",
 
