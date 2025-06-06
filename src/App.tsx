@@ -10,22 +10,23 @@ import ExploreLC from "./Components/ExploreLC/ExploreLC";
 import Team from "./Components/Team/Team";
 import Connect from "./Components/Connect/Connect";
 import Footer from "./Components/Footer/Footer";
+import Achievements from "./Components/Achievements/Achievements";
 function App() {
-
-    return (
-        <div className="appWrapper">
-            <Navbar />
-            <Home />
-            <About />
-            <Events />
-            <Gallery />
-            <Statistics />
-            <ExploreLC />
-            <Team />
-            <Connect />
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="appWrapper">
+      <Navbar />
+      <Home />
+      <About />
+      <Events />
+      <Achievements />
+      <Gallery />
+      <Statistics />
+      <ExploreLC />
+      <Team />
+      <Connect />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
