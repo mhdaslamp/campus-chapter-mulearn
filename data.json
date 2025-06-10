@@ -96,6 +96,19 @@
       ]
     }
   ],
+  "achievements": [
+    {
+      "title": "Permute",
+      "description":"showcased excellence in the State-level Permute event -Securing the 4th position",
+      "images": [
+        "https://i.postimg.cc/rps6GpLH/m0.png",
+        "https://i.postimg.cc/sD4btWj8/m1.png",
+        "https://i.postimg.cc/7LGsYJ4q/m-2.png",
+        "https://i.postimg.cc/d0y6KMR1/m2.png",
+        "https://i.postimg.cc/FK3yBymk/m3.png"
+      ]
+    }
+  ],
 
   "gallery": {
     "row1": [
@@ -131,8 +144,7 @@
     ]
   },
 
-  "achievements": [],
-
+  
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
