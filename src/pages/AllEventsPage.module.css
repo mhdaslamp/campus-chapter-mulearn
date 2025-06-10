@@ -1,0 +1,150 @@
+.allEventsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  color: #ae59ff;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  transform: translateX(-4px);
+  color: #9042EB;
+}
+
+.header h1 {
+  color: #ae59ff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.yearSelector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.yearButton {
+  padding: 0.7rem 2rem;
+  border: 2px solid #ae59ff;
+  border-radius: 2rem;
+  background: transparent;
+  color: #ae59ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yearButton.active {
+  background: #ae59ff;
+  color: white;
+}
+
+.yearButton:hover:not(.active) {
+  background: rgba(174, 89, 255, 0.1);
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eventCard {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.eventImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.eventImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.eventCard:hover .eventImage img {
+  transform: scale(1.05);
+}
+
+.eventContent {
+  padding: 1.5rem;
+}
+
+.eventDate {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #ae59ff;
+  font-weight: 600;
+}
+
+.eventDate .month {
+  text-transform: uppercase;
+}
+
+.eventTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.eventDescription {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .allEventsPage {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .yearButton {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+} 

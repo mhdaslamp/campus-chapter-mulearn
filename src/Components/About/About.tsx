@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import data from "../../../data.json";
+import data from "/data.json";
 import { useState } from "react";
 
 const About = () => {

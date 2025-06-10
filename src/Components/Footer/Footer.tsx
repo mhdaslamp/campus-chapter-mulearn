@@ -1,7 +1,8 @@
+import React from 'react';
 import styles from "./Footer.module.css";
 import { Instagram, X, Youtube, LinkedIn } from "./assets/svg";
 import { ULearnWhite } from "../../assets/svg/svg";
-import data from "../../../data.json";
+import data from "/data.json";
 
 const Footer = () => {
   return (

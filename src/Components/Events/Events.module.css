@@ -16,306 +16,204 @@
   scroll-margin-top: 3rem;
 }
 
-.innerDiv {
+.eventsContainer {
   display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Recent Event Card */
+.recentEventContainer {
+  flex: 0 0 45%;
+  position: sticky;
+  top: 100px;
+}
+
+.eventCard.recent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.eventCard.recent .eventDate {
+  font-size: 1.2rem;
+  color: #ae59ff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.eventCard.recent .eventImage {
   width: 100%;
+  height: 400px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.eventCard.recent .eventContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eventCard.recent .eventTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.eventCard.recent .eventDescription {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Other Events Container */
+.otherEventsContainer {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Other Event Cards */
+.eventCard:not(.recent) {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 180px;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  height: 100%;
 }
 
-.yearScroll {
-  position: relative; 
-  width: 100%;
-  padding: 0 1rem;
+.eventCard:not(.recent) .eventDate {
+  font-size: 1.1rem;
+  color: #ae59ff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.yearButtons {
+.eventCard:not(.recent) .eventImage {
+  width: 200px;
+  height: 160px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.eventCard:not(.recent) .eventContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+.eventCard:not(.recent) .eventTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.eventCard:not(.recent) .eventDescription {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.yearSelector {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.yearButtons::-webkit-scrollbar {
-  display: none;
+  margin-bottom: 2rem;
 }
 
 .yearButton {
   padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  min-width: 100px;
-  transition: all 0.3s ease;
+  border: 2px solid #ae59ff;
+  border-radius: 2rem;
+  background: transparent;
+  color: #ae59ff;
+  font-weight: 600;
   cursor: pointer;
-  border: none;
+  transition: all 0.3s ease;
 }
 
 .yearButton.active {
-  background-color: #ae59ff;
+  background: #ae59ff;
   color: white;
 }
 
-.yearButton:not(.active) {
-  background-color: #f3f4f6;
-  color: #4b5563;
-}
-
-.yearButton:not(.active):hover {
-  background-color: #e5e7eb;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 0px 24.0251px 0px rgba(0, 0, 0, 0.1);
-  padding: 10px 10px;
-  margin-bottom: .5rem;
-}
-
-.card .content {
-  display: flex;
-  align-items: center;
-  width: 95%;
-}
-
-.card .date,
-.card .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 10px;
-}
-
-.card .date {
-  font-size: 28px;
-  border-right: #d6abfe 5px solid;
-  text-transform: uppercase;
-}
-
-.card .text {
-  font-size: 18px;
-}
-
-.card img {
-  height: 110px;
-  border-radius: 10px;
-}
-
-.card.large {
-  max-width: 500px;
-  width: 50%;
-  border-radius: 1rem;
-  flex-wrap: wrap-reverse;
-  gap: 1rem;
-  justify-content: space-evenly;
-}
-
-.card.large img {
-  height: 400px;
-  width: 100%;
-  border-radius: 1rem;
-  object-fit: contain;
-}
-
-.card .large .text {
-  max-width: 300px;
-}
-
-.card .large .text span {
-  margin-top: .3rem;
-  font-size: 1rem;
-}
-
-.card.small {
-  border-radius: 1rem;
-  width: 95%;
-}
-
-.card.small .text {
-  width: 75%;
-}
-
-.card.small .text span {
-  margin-top: .3rem;
-  font-size: 1rem;
-}
-
-.subContent {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: .5rem;
-  justify-content: space-between;
-}
-
-.recentCard {
-  flex: 0 0 420px;
-  background: white;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(179,102,255,0.18);
-  border: 3px solid #b366ff;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.eventColumn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 700px;
-}
-
-.eventRow {
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(179,102,255,0.10);
-  padding: 1.5rem;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.viewAllContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 0;
-  margin-top: 0.5rem;
-}
-
 .viewAllButton {
-  padding: 0.6rem 1.8rem;
+  align-self: center;
+  padding: 0.8rem 2rem;
   background: #ae59ff;
   color: white;
   border: none;
   border-radius: 2rem;
   font-weight: 600;
-  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-  display: inline-block;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
 }
 
 .viewAllButton:hover {
-  background: #9042EB;
+  background: #8a3fd1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.2);
 }
 
-@media (max-width: 1200px) {
-  .subContent {
+@media (max-width: 1024px) {
+  .eventsContainer {
     flex-direction: column;
-    align-items: center;
   }
-  
-  .recentCard {
-    width: 100%;
-    max-width: 700px;
+
+  .recentEventContainer,
+  .otherEventsContainer {
+    flex: 0 0 100%;
   }
-  
-  .eventColumn {
-    width: 100%;
+
+  .recentEventContainer {
+    position: relative;
+    top: 0;
+  }
+
+  .eventCard.recent .eventImage {
+    height: 300px;
   }
 }
 
 @media (max-width: 768px) {
-  .yearButton {
-    min-width: 80px;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+  .yearSelector {
+    flex-wrap: wrap;
   }
-  
-  .eventRow {
+
+  .eventCard:not(.recent) {
     flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 1050px) {
-  .card .date {
-    font-size: 23px;
-  }
-  .card .text {
-    font-size: 15px;
-  }
-  .card.large img {
-    height: 360px;
-  }
-  .card img {
-    height: 90px;
-  }
-  .subContent {
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 880px) {
-  .events {
-    max-height: none;
-  }
-  .innerDiv {
-    flex-direction: column;
-  }
-  .card.large {
-    max-width: 400px;
-    width: 100%;
-  }
-  .card.small {
-    max-width: 550px;
-  }
-  .yearScroll {
-    padding: 0 0.5rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .events {
-    padding: 0rem 10px;
-  }
-  .card.large img {
     height: auto;
-    width: 100%;
+    padding: 1rem;
   }
-  .card {
-    padding: 5px 10px;
-    width: 85%;
-  }
-  .card .date {
-    font-size: 23px;
-  }
-  .card .text strong {
-    font-size: .9rem;
-    margin-bottom: .1rem;
-  }
-  .card.large .text span,
-  .card.small .text span {
-    font-size: .75rem;
-    margin-top: .1rem;
-  }
-  .card img {
-    height: 70px;
-  }
-  .yearButton {
-    min-width: 80px;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-}
 
-@media(width < 345px) {
-  .card .text strong {
-    font-size: .6rem;
+  .eventCard:not(.recent) .eventImage {
+    width: 100%;
+    height: 180px;
   }
-  .card.large .text span,
-  .card.small .text span {
-    font-size: .55rem;
+
+  .eventCard:not(.recent) .eventContent {
+    width: 100%;
   }
 }

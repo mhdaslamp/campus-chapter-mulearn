@@ -1,4 +1,5 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
@@ -10,21 +11,35 @@ import ExploreLC from "./Components/ExploreLC/ExploreLC";
 import Team from "./Components/Team/Team";
 import Connect from "./Components/Connect/Connect";
 import Footer from "./Components/Footer/Footer";
-function App() {
+import AllEventsPage from "./pages/AllEventsPage";
 
+function App() {
     return (
-        <div className="appWrapper">
-            <Navbar />
-            <Home />
-            <About />
-            <Events />
-            <Gallery />
-            <Statistics />
-            <ExploreLC />
-            <Team />
-            <Connect />
-            <Footer />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={
+                    <div className="appWrapper">
+                        <Navbar />
+                        <Home />
+                        <About />
+                        <Events />
+                        <Gallery />
+                        <Statistics />
+                        <ExploreLC />
+                        <Team />
+                        <Connect />
+                        <Footer />
+                    </div>
+                } />
+                <Route path="/all-events" element={
+                    <>
+                        <Navbar />
+                        <AllEventsPage />
+                        <Footer />
+                    </>
+                } />
+            </Routes>
+        </Router>
     );
 }
 

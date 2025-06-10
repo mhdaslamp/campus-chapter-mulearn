@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ULearn } from "../../assets/svg/svg";
 import { useReactPath } from "./path.hook.ts";
 import { AiOutlineMenu } from "react-icons/ai";
-import data from "../../../data.json";
+import data from "/data.json";
 
 const Navbar = () => {
   const [openmenu, setopenmenu] = useState(false);

@@ -1,6 +1,7 @@
 import styles from "./Statistics.module.css";
 import { ULearn } from "../../assets/svg/svg";
-import data from "../../../data.json"
+import React from 'react';
+import data from "/data.json"
 import { useEffect, useRef, useState } from "react";
 
 const Statistics = () => {

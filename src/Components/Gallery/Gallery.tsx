@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 import styles from "./Gallery.module.css";
-import data from '../../../data.json'
+import data from '/data.json'
 
 const Gallery = () => {
     const marqParams = {
