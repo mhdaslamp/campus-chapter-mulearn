@@ -10,6 +10,13 @@
       "year": 2025,
       "eventDetails": [
         {
+          "month": "Feb",
+          "date": "20",
+          "head": "STACKUP",
+          "para": "Stackup Bootcamp is a beginner-friendly web development program focused on hands-on learning. Participants will build responsive websites using HTML, CSS, and JavaScript, and gain practical experience with Git and GitHub through real-world projects.",
+          "img": "https://i.postimg.cc/3NrkyJVh/IMG-20250219-WA0022.jpg"
+        },
+        {
           "month": "Jan",
           "date": "17",
           "head": "Typeiko",
