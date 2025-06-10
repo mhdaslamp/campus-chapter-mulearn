@@ -1,20 +1,48 @@
 {
   "collegeCode": "GECSKP",
 
-  "college": "Government Engineering College     Sreekrishnapuram",
+  "college": "Government Engineering College Sreekrishnapuram",
 
-  "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT)as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking.In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision..",
+  "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT) as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking. In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision.",
 
   "events": [
     {
       "year": 2025,
       "eventDetails": [
         {
+          "month": "Mar",
+          "date": "29",
+          "head": "μLearn GEC SKP – 4th Best Campus Award at Perμte'25",
+          "para": "μLearn GEC SKP proudly secured the 4th Best Campus Award at Perμte'25, recognizing the dedication, teamwork, and consistent efforts of our Executive Committee. This achievement reflects our commitment to collaboration, innovation, and growth within the campus community.",
+          "img": "https://i.postimg.cc/zDF9rSr6/Permute.jpg"
+        },
+        {
+          "month": "Mar",
+          "date": "20",
+          "head": "Kutty Story: If I Could Meet My Younger Self",
+          "para": "This blog-writing event invited participants to reflect on their past and share heartfelt messages or advice to their younger selves. Emphasizing originality and creativity, the initiative aimed to inspire through personal storytelling, with all contributors earning 200 karma points.",
+          "img": "https://i.postimg.cc/gJ8bRf12/Kutty-Story.jpg"
+        },
+        {
+          "month": "Mar",
+          "date": "10",
+          "head": "µWhat?!",
+          "para": "MuLearn Introduction & Discord Onboarding session offered an introduction to the MuLearn community and a hands-on walkthrough of its Discord platform. Participants explored how MuLearn fosters collaboration, learning, and growth through engaging activities—from games to internship opportunities.",
+          "img": "https://i.postimg.cc/nhJjDJ5C/MuWhat.jpg"
+        },
+        {
+          "month": "Feb",
+          "date": "25",
+          "head": "STACKUP Session-2",
+          "para": "Session 2: Mastering CSS was a hands-on workshop focused on the fundamentals of web styling using CSS. Led by Abhiram (S6 IT), the session covered layout techniques, responsive design principles, and best practices to enhance the visual appeal of websites. It provided participants with practical skills to create well-structured and stylish web pages.",
+          "img": "https://i.postimg.cc/sgNmz1xt/Stackup-Session2.jpg"
+        },
+        {
           "month": "Feb",
           "date": "20",
           "head": "STACKUP",
           "para": "Stackup Bootcamp is a beginner-friendly web development program focused on hands-on learning. Participants will build responsive websites using HTML, CSS, and JavaScript, and gain practical experience with Git and GitHub through real-world projects.",
-          "img": "https://i.postimg.cc/3NrkyJVh/IMG-20250219-WA0022.jpg"
+          "img": "https://i.postimg.cc/3NrkyJVh/Stackup.jpg"
         },
         {
           "month": "Jan",
@@ -43,20 +71,19 @@
           "img": "https://i.postimg.cc/Kz18wQNy/py.jpg"
         },
         {
-          "month": "july",
+          "month": "Jul",
           "date": "24",
           "head": "Salt Mango Tree",
           "para": "KTU Mastery Pathway 2024",
           "img": "https://i.postimg.cc/d1Ty7h42/Whats-App-Image-2024-07-24-at-11-55-20-AM.jpg"
         },
         {
-          "month": "july",
+          "month": "Jul",
           "date": "17",
           "head": "Salt Mango Tree",
           "para": "Discover the Future of Electric Vehicles and Industries in India!",
           "img": "https://i.postimg.cc/vBcd9qyJ/Whats-App-Image-2024-07-17-at-12-32-46-4e202e01.jpg"
         },
-    
         {
           "month": "Mar",
           "date": "25",
@@ -67,16 +94,15 @@
         {
           "month": "Feb",
           "date": "17",
-          "head": "online python workshop",
+          "head": "Online Python Workshop",
           "para": "µLearn GECSKP and µLearn MITS collaborated to organize an engaging Python online hands-on workshop tailored for beginners",
           "img": "https://i.postimg.cc/wxkGnH1g/python.jpg"
         },
-        
         {
           "month": "Feb",
           "date": "13",
           "head": "Code Karma",
-          "para": "The Code Karma event, organized by µLearn GECSKP, was a transformative 30-day coding challenge designed to enhance participants' programming skills and foster aculture of continuous learning",
+          "para": "The Code Karma event, organized by µLearn GECSKP, was a transformative 30-day coding challenge designed to enhance participants' programming skills and foster a culture of continuous learning",
           "img": "https://i.postimg.cc/Y0SfJ5PC/code.jpg"
         },
         {
@@ -149,7 +175,6 @@
   
 
  "team": {
-
     "CampusEnabler": {
       "name": "ANOOP S K M",
       "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
@@ -225,14 +250,10 @@
     "IGLead(IOT)": {
       "name": "VIGNESH",
       "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
-  
     }
-},
-
-
+  },
 
   "discordLink": "https://discord.gg/8ga5EEmAcy",
-
 
   "whatsAppLink": "https://chat.whatsapp.com/FvoLhftysm04LdsYt2S5Zt",
 

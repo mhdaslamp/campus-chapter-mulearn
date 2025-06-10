@@ -18,7 +18,7 @@
 
 .eventsContainer {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: flex-start;
   max-width: 1400px;
   margin: 0 auto;
@@ -26,7 +26,7 @@
 
 /* Recent Event Card */
 .recentEventContainer {
-  flex: 0 0 45%;
+  flex: 0 0 38%;
   position: sticky;
   top: 100px;
 }
@@ -53,7 +53,8 @@
   width: 100%;
   height: 400px;
   border-radius: 0.5rem;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #f5f5f5;
 }
 
 .eventCard.recent .eventContent {
@@ -76,7 +77,7 @@
 
 /* Other Events Container */
 .otherEventsContainer {
-  flex: 0 0 50%;
+  flex: 0 0 58%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -193,7 +194,12 @@
   }
 
   .eventCard.recent .eventImage {
-    height: 300px;
+    height: 350px;
+  }
+
+  .eventImage {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 }
 
@@ -216,4 +222,131 @@
   .eventCard:not(.recent) .eventContent {
     width: 100%;
   }
+
+  .eventCard.recent .eventImage {
+    height: 300px;
+  }
+  
+  .eventImage {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .eventImage:hover {
+    transform: translateY(-2px) scale(1.005);
+  }
+}
+
+/* Base image styles */
+.eventImage {
+  width: 100%;
+  object-fit: contain;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.12),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.eventImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+.eventImage:hover {
+  transform: translateY(-3px) scale(1.01);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.15)
+  );
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Recent event specific styles */
+.eventCard.recent .eventImage {
+  height: 400px;
+}
+
+/* Other event specific styles */
+.eventCard:not(.recent) .eventImage {
+  height: 180px;
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+/* For other event cards */
+.otherEventCard .eventImage {
+  height: 180px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 3px 4px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.otherEventCard .eventImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+.otherEventCard .eventImage:hover {
+  transform: translateY(-2px) scale(1.01);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.15)
+  );
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 2px 3px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 25px rgba(0, 0, 0, 0.08);
 }
