@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./Connect.module.css";
 import image from "./assets/image.svg";
 import { Discord, Whatsapp } from "./assets/svg";

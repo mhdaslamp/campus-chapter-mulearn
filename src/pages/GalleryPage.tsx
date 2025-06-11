@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './GalleryPage.module.css';
 import data from '/data.json';
 import { Link } from 'react-router-dom';

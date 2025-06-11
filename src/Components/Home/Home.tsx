@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./Home.module.css";
 import image from "./assets/homeimg.svg";
 import { BlueStar, WhiteStar, Mu } from "./assets/svg";

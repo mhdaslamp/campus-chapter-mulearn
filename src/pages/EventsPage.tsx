@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './EventsPage.module.css';
 import data from '/data.json';
 import { Link } from 'react-router-dom';

@@ -1,20 +1,18 @@
-import styles from "./Navbar.module.css";
+import styles from './Navbar.module.css';
 import { useEffect, useState } from "react";
 import { ULearn } from "../../assets/svg/svg";
-import { useReactPath } from "./path.hook.ts";
 import { AiOutlineMenu } from "react-icons/ai";
 import data from "/data.json";
 
 const Navbar = () => {
-  const [openmenu, setopenmenu] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbg, setNavBg] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   function openMenu() {
-    setopenmenu(!openmenu);
+    setIsMenuOpen(!isMenuOpen);
   }
 
-  const path = useReactPath();
   const navContent = ["home", "about", "events", "gallery", "team", "contact"];
 
   useEffect(() => {
@@ -121,7 +119,7 @@ const Navbar = () => {
         <button onClick={openMenu} className={styles.hamburger}>
           <AiOutlineMenu />
         </button>
-        {openmenu && (
+        {isMenuOpen && (
           <div>
             {navContent.map((content, i) => (
               <a 

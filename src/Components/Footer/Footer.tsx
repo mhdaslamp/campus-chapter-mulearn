@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./Footer.module.css";
 import { Instagram, X, Youtube, LinkedIn } from "./assets/svg";
 import { ULearnWhite } from "../../assets/svg/svg";
