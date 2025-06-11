@@ -27,6 +27,10 @@ const Events: React.FC<EventsProps> = ({ defaultYear = 2025 }) => {
   const selectedYearEvents =
     data.events.find((event) => event.year === defaultYear)?.eventDetails || [];
 
+  const handleRegistrationClick = () => {
+    window.open("https://tinyurl.com/karmayottam", "_blank");
+  };
+
   return (
     <div className={styles.events} id="events">
       <h2>Our Event Journey</h2>
@@ -42,6 +46,12 @@ const Events: React.FC<EventsProps> = ({ defaultYear = 2025 }) => {
                 <div className={styles.text}>
                   <strong>{selectedYearEvents[0].head}</strong>
                   <span>{selectedYearEvents[0].para}</span>
+                  <button 
+                    className={styles.registerButton}
+                    onClick={handleRegistrationClick}
+                  >
+                    Register Now
+                  </button>
                 </div>
               </div>
               <img

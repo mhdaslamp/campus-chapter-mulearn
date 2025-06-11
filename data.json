@@ -10,6 +10,42 @@
       "year": 2025,
       "eventDetails": [
         {
+          "month": "Jun",
+          "date": "12",
+          "head": "Karmayottam",
+          "para": "7 days of growth, productivity, action & rewards! Take on meaningful tasks, level up your skills & rise on the leaderboard!.The more tasks you complete, the higher you rise!.",
+          "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg"
+        },
+        
+        {
+          "month": "May",
+          "date": "28",
+          "head": "CodeSprint 30",
+          "para": "GDG GEC Palakkad and μLearn GECSKP launched a 30-day upskilling program starting May 28, focusing on resumes, interviews, and internships.Participants geared up for career success with expert-led sessions and hands-on guidance.",
+          "img": "https://i.postimg.cc/fRLHR65Z/Code-sprint.jpg"
+        },
+        {
+          "month": "April",
+          "date": "14",
+          "head": "Karmayottam",
+          "para": "μLearn GECSKP organized a week-long Karma Sprint from April 14–21, where participants completed real-world tasks to build skills and earn Karma Points.The challenge promoted growth, productivity, and leaderboard-worthy action.",
+          "img": "https://i.postimg.cc/50nYyksd/Karmayottam.jpg"
+        },
+        {
+          "month": "Mar",
+          "date": "12",
+          "head": "μLearn Orientation",
+          "para": "μLearn GECSKP conducted an orientation session introducing the community and the concept of Karma Points, inspiring students to learn, grow, and collaborate.The session encouraged active participation and skill-building through community-driven learning.",
+          "img": "https://i.postimg.cc/jdQVf0z7/Orientation.jpg"
+        },
+        {
+          "month": "Feb",
+          "date": "20",
+          "head": "StackUp Bootcamp",
+          "para": "μLearn GECSKP and Tinker hub GECSKP collaborated to organize a beginner-friendly bootcamp on web development, covering HTML, CSS, JavaScript, and Git.",
+          "img": "https://i.postimg.cc/3NrkyJVh/Stackup.jpg"
+        },
+        {
           "month": "Jan",
           "date": "17",
           "head": "Typeiko",
