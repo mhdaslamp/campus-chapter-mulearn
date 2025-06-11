@@ -6,6 +6,14 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    scroll-margin-top: 80px; /* Add space for fixed header if any */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Add styles for the section anchor */
+.events:target {
+    scroll-margin-top: 80px;
+    padding-top: 80px; /* Add padding to prevent content from being hidden under fixed header */
 }
 
 .events h2 {

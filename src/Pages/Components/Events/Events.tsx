@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Events.module.css";
 import data from "../../../../data.json";
 
@@ -26,6 +26,18 @@ interface EventsProps {
 const Events: React.FC<EventsProps> = ({ defaultYear = 2025 }) => {
   const selectedYearEvents =
     data.events.find((event) => event.year === defaultYear)?.eventDetails || [];
+
+  useEffect(() => {
+    // Check if the URL contains #events hash
+    if (window.location.hash === '#events') {
+      // Get the events element
+      const eventsElement = document.getElementById('events');
+      if (eventsElement) {
+        // Scroll to the element with smooth behavior
+        eventsElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
 
   const handleRegistrationClick = () => {
     window.open("https://tinyurl.com/karmayottam", "_blank");
