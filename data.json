@@ -96,6 +96,19 @@
       ]
     }
   ],
+  "achievements": [
+    {
+    "title": "4th Best Campus Award at Perµte'25",
+      "description":"We’re proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
+      "images": [
+        "https://i.postimg.cc/rps6GpLH/m0.png",
+        "https://i.postimg.cc/sD4btWj8/m1.png",
+        "https://i.postimg.cc/7LGsYJ4q/m-2.png",
+        "https://i.postimg.cc/d0y6KMR1/m2.png",
+        "https://i.postimg.cc/FK3yBymk/m3.png"
+      ]
+    }
+  ],
 
   "gallery": {
     "row1": [
@@ -131,8 +144,7 @@
     ]
   },
 
-  "achievements": [],
-
+  
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
