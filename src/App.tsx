@@ -12,6 +12,7 @@ import Team from "./Components/Team/Team";
 import Connect from "./Components/Connect/Connect";
 import Footer from "./Components/Footer/Footer";
 import AllEventsPage from "./pages/AllEventsPage";
+import Achievements from "./Components/Achievements/Achievements";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Home />
                         <About />
                         <Events />
+                        <Achievements />
                         <Gallery />
                         <Statistics />
                         <ExploreLC />

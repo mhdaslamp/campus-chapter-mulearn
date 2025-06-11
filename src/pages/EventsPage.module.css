@@ -52,30 +52,58 @@
   gap: 1rem;
   padding: 0 1rem;
   min-width: min-content;
+  flex-wrap: wrap;
 }
 
 .yearButton {
   padding: 0.7rem 2rem;
-  border-radius: 9999px;
+  border: 2px solid #ae59ff;
+  border-radius: 2rem;
   min-width: 100px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  border: none;
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.yearButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(174, 89, 255, 0.1), rgba(174, 89, 255, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yearButton:hover::before {
+  opacity: 1;
 }
 
 .yearButton.active {
-  background-color: #ae59ff;
+  background: #ae59ff;
   color: white;
+  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.3);
+}
+
+.yearButton.active:hover {
+  background: #9042EB;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(174, 89, 255, 0.4);
 }
 
 .yearButton:not(.active) {
-  background-color: #f3f4f6;
-  color: #4b5563;
+  background: rgba(174, 89, 255, 0.1);
+  color: #ae59ff;
 }
 
 .yearButton:not(.active):hover {
-  background-color: #e5e7eb;
+  background: rgba(174, 89, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.2);
 }
 
 .eventsGrid {

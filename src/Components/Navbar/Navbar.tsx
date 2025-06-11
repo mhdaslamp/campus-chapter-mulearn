@@ -2,39 +2,59 @@ import styles from './Navbar.module.css';
 import { useEffect, useState } from "react";
 import { ULearn } from "../../assets/svg/svg";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useLocation, useNavigate } from "react-router-dom";
 import data from "/data.json";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbg, setNavBg] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
+  const navigate = useNavigate();
 
   function openMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  const navContent = ["home", "about", "events", "gallery", "team", "contact"];
+  const navContent = ["home", "about", "achievements", "events", "gallery", "team", "contact"];
+
+  const handleNavClick = (content: string, e: React.MouseEvent) => {
+    if (location.pathname === "/all-events" && content === "events") {
+      e.preventDefault();
+      navigate('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const eventsSection = document.getElementById('events');
+        if (eventsSection) {
+          eventsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
-      
-      // Find current section in view
-      const sections = navContent.map(section => document.getElementById(section));
-      const scrollPosition = window.scrollY + 100;
+    if (location.pathname === "/all-events") {
+      setActiveSection("events");
+    } else {
+      const handleScroll = () => {
+        window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
+        
+        const sections = navContent.map(section => document.getElementById(section));
+        const scrollPosition = window.scrollY + 100;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navContent[i]);
-          break;
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
+          if (section && section.offsetTop <= scrollPosition) {
+            setActiveSection(navContent[i]);
+            break;
+          }
         }
-      }
-    };
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [navContent]);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [location.pathname, navContent]);
 
   const changeNavBg = () => {
     window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
@@ -66,6 +86,7 @@ const Navbar = () => {
             <a 
               href={`#${content}`} 
               key={i.toString() + content}
+              onClick={(e) => handleNavClick(content, e)}
               style={{
                 display: "inline-block",
                 padding: "0 4px",
@@ -125,6 +146,7 @@ const Navbar = () => {
               <a 
                 href={`#${content}`} 
                 key={i.toString() + content}
+                onClick={(e) => handleNavClick(content, e)}
                 style={{
                   display: "block",
                   padding: "8px 4px",

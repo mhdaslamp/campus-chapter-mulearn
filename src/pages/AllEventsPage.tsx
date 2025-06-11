@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './AllEventsPage.module.css';
 import data from "/data.json";
@@ -26,6 +26,11 @@ const AllEventsPage = () => {
   const eventsData = data as EventsData;
   const years = eventsData.events.map(event => event.year).sort((a, b) => b - a);
   
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const selectedYearEvents = eventsData.events.find(
     event => event.year === selectedYear
   )?.eventDetails || [];
@@ -33,9 +38,6 @@ const AllEventsPage = () => {
   return (
     <div className={styles.allEventsPage}>
       <div className={styles.header}>
-        <button onClick={() => navigate('/')} className={styles.backButton}>
-          ← Back to Home
-        </button>
         <h1>All Events {selectedYear}</h1>
       </div>
 
@@ -67,6 +69,12 @@ const AllEventsPage = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className={styles.backButtonContainer}>
+        <button onClick={() => navigate('/')} className={styles.backButton}>
+          ← Back to Home
+        </button>
       </div>
     </div>
   );

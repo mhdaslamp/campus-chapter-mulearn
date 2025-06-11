@@ -129,6 +129,19 @@
       ]
     }
   ],
+  "achievements": [
+    {
+    "title": "4th Best Campus Award at Perµte'25",
+      "description":"We're proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
+      "images": [
+        "https://i.postimg.cc/rps6GpLH/m0.png",
+        "https://i.postimg.cc/sD4btWj8/m1.png",
+        "https://i.postimg.cc/7LGsYJ4q/m-2.png",
+        "https://i.postimg.cc/d0y6KMR1/m2.png",
+        "https://i.postimg.cc/FK3yBymk/m3.png"
+      ]
+    }
+  ],
 
   "gallery": {
     "row1": [
@@ -161,20 +174,19 @@
       {
         "image": "https://i.postimg.cc/Qxyvm4x5/Typing-warriors-rejoice-We-re-thrilled-to-announce-that-the-30-day-Typing-Challenge-has-come-to.jpg"
       }
-      
     ]
   },
 
+  
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
     "InterestGroups": 3,
-    "karmaEarned": 300000,
+    "karmaEarned": 360000,
     "rank": 14
   },
-  
 
- "team": {
+  "team": {
     "CampusEnabler": {
       "name": "ANOOP S K M",
       "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
@@ -183,13 +195,13 @@
       "name": "ASLAM",
       "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
     },
-    "CampusCoLead1": { 
-      "name": "FAHAD", 
-      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png" 
+    "CampusCoLead1": {
+      "name": "FAHAD",
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png"
     },
-    "CampusCoLead2": { 
-      "name": "GOPIKA", 
-      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png" 
+    "CampusCoLead2": {
+      "name": "GOPIKA",
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png"
     },
     "CreativeLead": {
       "name": "FADEELA",

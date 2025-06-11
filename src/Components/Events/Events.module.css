@@ -142,22 +142,54 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .yearButton {
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 2rem;
   border: 2px solid #ae59ff;
   border-radius: 2rem;
-  background: transparent;
+  background: rgba(174, 89, 255, 0.1);
   color: #ae59ff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.yearButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(174, 89, 255, 0.1), rgba(174, 89, 255, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yearButton:hover::before {
+  opacity: 1;
+}
+
+.yearButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.2);
+  background: rgba(174, 89, 255, 0.15);
 }
 
 .yearButton.active {
   background: #ae59ff;
   color: white;
+  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.3);
+}
+
+.yearButton.active:hover {
+  background: #9042EB;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(174, 89, 255, 0.4);
 }
 
 .viewAllButton {
