@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./Achievements.module.css";
 import data from "../../../data.json";
-import Marquee from "react-fast-marquee";
 
 export interface AchievementDetails {
   title: string;
@@ -10,9 +9,75 @@ export interface AchievementDetails {
 }
 
 const Achievements: React.FC = () => {
-  const marqParams = {
-    autoFill: true,
-    pauseOnHover: true,
+  const scrollRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleScroll = (index: number) => {
+      const container = scrollRefs.current[index];
+      const content = contentRefs.current[index];
+      
+      if (container && content) {
+        // When we've scrolled past the first set of images
+        if (container.scrollLeft >= content.offsetWidth / 2) {
+          // Reset to the beginning without animation
+          container.scrollTo({
+            left: 0,
+            behavior: 'auto'
+          });
+        }
+      }
+    };
+
+    // Add scroll event listeners to all containers
+    scrollRefs.current.forEach((container, index) => {
+      if (container) {
+        container.addEventListener('scroll', () => handleScroll(index));
+      }
+    });
+
+    // Cleanup
+    return () => {
+      scrollRefs.current.forEach((container, index) => {
+        if (container) {
+          container.removeEventListener('scroll', () => handleScroll(index));
+        }
+      });
+    };
+  }, []);
+
+  const scroll = (direction: 'left' | 'right', index: number) => {
+    const container = scrollRefs.current[index];
+    if (container) {
+      const scrollAmount = container.clientWidth * 0.8;
+      const targetScroll = direction === 'left' 
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount;
+      
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const renderImages = (images: string[], achievementTitle: string) => {
+    // Create three sets of images for smoother infinite scroll
+    const triplicatedImages = [...images, ...images, ...images];
+    
+    return (
+      <>
+        {triplicatedImages.map((src, imgIndex) => (
+          <div key={`${achievementTitle}-${imgIndex}`} className={styles.imgContainer}>
+            <img
+              src={src}
+              alt={`${achievementTitle} - Image ${(imgIndex % images.length) + 1}`}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </>
+    );
   };
 
   return (
@@ -35,21 +100,37 @@ const Achievements: React.FC = () => {
                   </div>
 
                   <div className={styles.imageGallery}>
-                    <Marquee
-                      direction={index % 2 == 0 ? "left" : "right"}
-                      {...marqParams}
-                      className={styles.marqueeContainer}
+                    <button 
+                      className={`${styles.scrollIndicator} ${styles.scrollLeft}`}
+                      onClick={() => scroll('left', index)}
+                      aria-label="Scroll left"
                     >
-                      {achievement.images.map((src, imgIndex) => (
-                        <div key={imgIndex} className={styles.imgContainer}>
-                          <img
-                            src={src}
-                            alt={`${achievement.title} - Image ${imgIndex + 1}`}
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
-                    </Marquee>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                      </svg>
+                    </button>
+
+                    <div 
+                      ref={el => scrollRefs.current[index] = el}
+                      className={styles.scrollableContainer}
+                    >
+                      <div 
+                        ref={el => contentRefs.current[index] = el}
+                        className={styles.scrollableContent}
+                      >
+                        {renderImages(achievement.images, achievement.title)}
+                      </div>
+                    </div>
+
+                    <button 
+                      className={`${styles.scrollIndicator} ${styles.scrollRight}`}
+                      onClick={() => scroll('right', index)}
+                      aria-label="Scroll right"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 18l6-6-6-6"/>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               ),

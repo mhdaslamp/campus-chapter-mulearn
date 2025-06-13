@@ -12,6 +12,11 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Scroll to top on page load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   function openMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
@@ -29,6 +34,18 @@ const Navbar = () => {
       });
     }
   }, []);
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    setActiveSection('home');
+  };
 
   const handleNavClick = (content: string, e: React.MouseEvent) => {
     e.preventDefault();
@@ -83,7 +100,7 @@ const Navbar = () => {
       }}
     >
       <div className={styles.navbarLeft}>
-        <a href="#home" onClick={(e) => handleNavClick("Home", e)}>
+        <a href="/" onClick={handleLogoClick}>
           <ULearn />
           <p>{data.collegeCode}</p>
         </a>

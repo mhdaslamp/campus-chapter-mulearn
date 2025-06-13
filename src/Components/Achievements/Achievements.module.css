@@ -66,19 +66,113 @@
 .imageGallery {
     padding: 1rem 0;
     background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
-.marqueeContainer {
-    width: 100% !important;
+.scrollableContainer {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 5%,
+        black 95%,
+        transparent
+    );
+}
+
+.scrollableContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollableContainer:active {
+    cursor: grabbing;
+}
+
+.scrollableContent {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scrollImages 40s linear infinite;
+    will-change: transform;
+}
+
+.scrollableContainer:hover .scrollableContent,
+.scrollableContainer:active .scrollableContent {
+    animation-play-state: paused;
+}
+
+.scrollIndicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    border: none;
+    padding: 0;
+}
+
+.scrollIndicator:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scrollLeft {
+    left: 1rem;
+}
+
+.scrollRight {
+    right: 1rem;
+}
+
+.imageGallery:hover .scrollIndicator {
+    opacity: 1;
+}
+
+.scrollIndicator svg {
+    width: 24px;
+    height: 24px;
+    color: #ae59ff;
+}
+
+@keyframes scrollImages {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-33.333% - 0.667rem));
+    }
 }
 
 .imgContainer {
     padding: 0 1rem;
     height: 300px;
-    width: 400px;
+    min-width: 400px;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .imgContainer img {
@@ -86,11 +180,13 @@
     width: 100%;
     object-fit: cover;
     border-radius: 0.75rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .imgContainer:hover img {
     transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */
@@ -101,7 +197,7 @@
 
     .imgContainer {
         height: 250px;
-        width: 350px;
+        min-width: 350px;
     }
 }
 
@@ -128,8 +224,16 @@
 
     .imgContainer {
         height: 200px;
-        width: 300px;
+        min-width: 300px;
         padding: 0 0.75rem;
+    }
+    .scrollIndicator {
+        width: 32px;
+        height: 32px;
+    }
+    .scrollIndicator svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -157,8 +261,16 @@
 
     .imgContainer {
         height: 180px;
-        width: 250px;
+        min-width: 250px;
         padding: 0 0.5rem;
+    }
+    .scrollIndicator {
+        width: 28px;
+        height: 28px;
+    }
+    .scrollIndicator svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -177,6 +289,6 @@
 
     .imgContainer {
         height: 150px;
-        width: 200px;
+        min-width: 200px;
     }
 }

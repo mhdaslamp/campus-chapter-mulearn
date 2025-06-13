@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Events.module.css';
 import data from '../../../data.json';
@@ -47,7 +47,36 @@ interface EventsData {
 const Events: React.FC = () => {
   const eventsData = data as EventsData;
   const [selectedYear, setSelectedYear] = useState<number>(2025);
+  const [isInView, setIsInView] = useState(false);
+  const [expandedCards, setExpandedCards] = useState<number[]>([]);
+  const eventsRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          // Once the animation is triggered, we can disconnect the observer
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the section is visible
+        rootMargin: '0px'
+      }
+    );
+
+    if (eventsRef.current) {
+      observer.observe(eventsRef.current);
+    }
+
+    return () => {
+      if (eventsRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
   // Get events for the selected year directly from the array
   const currentYearEvent = eventsData.events.find(event => event.year === selectedYear);
@@ -73,8 +102,24 @@ const Events: React.FC = () => {
     navigate('/all-events');
   };
 
+  const toggleReadMore = (index: number) => {
+    setExpandedCards(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const isDescriptionLong = (text: string) => {
+    return text.length > 150; // Adjust this number based on your needs
+  };
+
   return (
-    <div className={styles.events} id="events">
+    <div 
+      ref={eventsRef}
+      className={`${styles.events} ${isInView ? styles.inView : ''}`} 
+      id="events"
+    >
       <h2>Our Event Journey</h2>
       <div className={styles.yearSelector}>
         {years.map((year) => (
@@ -105,12 +150,25 @@ const Events: React.FC = () => {
           {/* Other Events - Right Side */}
           <div className={styles.otherEventsContainer}>
             {otherEvents.map((event: EventDetail, index: number) => (
-              <div key={index} className={styles.eventCard}>
+              <div 
+                key={index} 
+                className={`${styles.eventCard} ${expandedCards.includes(index) ? styles.expanded : ''}`}
+              >
                 <div className={styles.eventDate}>{`${event.month} ${event.date}`}</div>
                 <img src={event.img} alt={event.head} className={styles.eventImage} />
                 <div className={styles.eventContent}>
                   <h3 className={styles.eventTitle}>{event.head}</h3>
-                  <p className={styles.eventDescription}>{event.para}</p>
+                  <p className={`${styles.eventDescription} ${!expandedCards.includes(index) ? styles.collapsed : ''}`}>
+                    {event.para}
+                  </p>
+                  {isDescriptionLong(event.para) && (
+                    <button
+                      className={`${styles.readMoreButton} ${expandedCards.includes(index) ? styles.expanded : ''}`}
+                      onClick={() => toggleReadMore(index)}
+                    >
+                      {expandedCards.includes(index) ? 'Show Less' : 'Read More'}
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

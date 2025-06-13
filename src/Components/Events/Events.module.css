@@ -6,6 +6,24 @@
   justify-content: center;
   gap: 1rem;
   scroll-margin-top: 3rem;
+  background: linear-gradient(180deg, rgba(174, 89, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.events::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(174, 89, 255, 0.2) 50%, 
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
 }
 
 .events h2 {
@@ -14,6 +32,23 @@
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   scroll-margin-top: 3rem;
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.events h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #ae59ff, #9042EB);
+  border-radius: 2px;
+  opacity: 0.7;
 }
 
 .eventsContainer {
@@ -27,7 +62,7 @@
 
 .eventsContent {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   align-items: flex-start;
   width: 100%;
   margin-bottom: 0.5rem;
@@ -35,22 +70,25 @@
 
 /* Recent Event Card */
 .recentEventContainer {
-  flex: 0 0 38%;
+  flex: 0 0 30%;
   position: sticky;
   top: 100px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .eventCard.recent {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1.2rem;
+  padding: 1.5rem;
   background: #ffffff;
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(174, 89, 255, 0.1);
   height: auto;
   border: 1px solid rgba(174, 89, 255, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
 }
@@ -63,11 +101,18 @@
   width: 100%;
   height: 6px;
   background: linear-gradient(90deg, #ae59ff, #9042EB);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .eventCard.recent:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.01);
   box-shadow: 0 12px 40px rgba(174, 89, 255, 0.15);
+}
+
+.eventCard.recent:hover::before {
+  transform: scaleX(1);
 }
 
 .eventCard.recent .eventDate {
@@ -82,17 +127,17 @@
 
 .eventCard.recent .eventImage {
   width: 100%;
-  height: 400px;
+  height: 320px;
   border-radius: 1rem;
   object-fit: cover;
   background-color: #f5f5f5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .eventCard.recent .eventImage:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  filter: brightness(1.05) contrast(1.05);
 }
 
 .eventCard.recent .eventContent {
@@ -115,27 +160,36 @@
 
 /* Other Events Container */
 .otherEventsContainer {
-  flex: 0 0 58%;
+  flex: 0 0 68%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
 }
 
 /* Other Event Cards */
 .eventCard:not(.recent) {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 1.2rem;
+  padding: 1.2rem;
   background: #ffffff;
   border-radius: 1.2rem;
   box-shadow: 0 4px 16px rgba(174, 89, 255, 0.08);
-  height: 200px;
-  align-items: center;
+  min-height: 180px;
+  height: auto;
+  align-items: flex-start;
   border: 1px solid rgba(174, 89, 255, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
+}
+
+.eventCard:not(.recent).expanded {
+  height: auto;
 }
 
 .eventCard:not(.recent)::after {
@@ -147,11 +201,11 @@
   height: 3px;
   background: linear-gradient(90deg, #ae59ff, #9042EB);
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .eventCard:not(.recent):hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.01);
   box-shadow: 0 8px 24px rgba(174, 89, 255, 0.12);
 }
 
@@ -171,17 +225,17 @@
 
 .eventCard:not(.recent) .eventImage {
   width: 220px;
-  height: 180px;
+  height: 160px;
   border-radius: 0.8rem;
   object-fit: cover;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .eventCard:not(.recent) .eventImage:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.05);
 }
 
 .eventCard:not(.recent) .eventContent {
@@ -190,24 +244,84 @@
   gap: 0.5rem;
   flex: 1;
   overflow: hidden;
+  padding-right: 0.5rem;
+  min-width: 0;
 }
 
 .eventCard:not(.recent) .eventTitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #000;
   margin: 0;
+  line-height: 1.3;
 }
 
 .eventCard:not(.recent) .eventDescription {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.4;
+  margin: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.eventCard:not(.recent) .eventDescription.collapsed {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin: 0;
+}
+
+.readMoreButton {
+  color: #ae59ff;
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-top: 0.3rem;
+}
+
+.readMoreButton:hover {
+  color: #9042EB;
+  transform: translateX(4px);
+}
+
+.readMoreButton::after {
+  content: '→';
+  font-size: 1rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+}
+
+.readMoreButton:hover::after {
+  transform: translateX(4px);
+}
+
+.readMoreButton.expanded::after {
+  content: '↑';
+  transform: rotate(0deg);
+}
+
+.readMoreButton.expanded:hover::after {
+  transform: rotate(-180deg);
+}
+
+.eventCard:not(.recent):nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.eventCard:not(.recent):nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.eventCard:not(.recent):nth-child(3) {
+  transition-delay: 0.5s;
 }
 
 .yearSelector {
@@ -216,6 +330,7 @@
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .yearButton {
@@ -226,9 +341,10 @@
   color: #ae59ff;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
+  transform: translateY(0);
 }
 
 .yearButton::before {
@@ -238,51 +354,50 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(174, 89, 255, 0.1), rgba(174, 89, 255, 0.05));
+  background: linear-gradient(45deg, rgba(174, 89, 255, 0.2), rgba(174, 89, 255, 0.1));
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.4s ease;
+  transform: scale(0.8);
+}
+
+.yearButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(174, 89, 255, 0.2);
+  background: rgba(174, 89, 255, 0.15);
+  border-color: #9042EB;
 }
 
 .yearButton:hover::before {
   opacity: 1;
-}
-
-.yearButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.2);
-  background: rgba(174, 89, 255, 0.15);
+  transform: scale(1);
 }
 
 .yearButton.active {
   background: #ae59ff;
   color: white;
   box-shadow: 0 4px 12px rgba(174, 89, 255, 0.3);
-}
-
-.yearButton.active:hover {
-  background: #9042EB;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(174, 89, 255, 0.4);
+  animation: pulse 2s infinite;
 }
 
 .viewAllButton {
   align-self: center;
-  padding: 0.7rem 2rem;
+  padding: 0.8rem 2rem;
   background: linear-gradient(135deg, #ae59ff, #9042EB);
   color: white;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 1.8rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   margin-top: 0.5rem;
-  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(174, 89, 255, 0.15);
   position: relative;
   overflow: hidden;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  letter-spacing: 0.3px;
 }
 
 .viewAllButton::before {
@@ -292,33 +407,39 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.5s ease;
+  transform: scale(0.8);
 }
 
 .viewAllButton::after {
   content: '→';
-  font-size: 1rem;
-  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+  margin-left: 0.2rem;
 }
 
 .viewAllButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(174, 89, 255, 0.3);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(174, 89, 255, 0.25);
+  background: linear-gradient(135deg, #9042EB, #ae59ff);
 }
 
 .viewAllButton:hover::before {
   opacity: 1;
+  transform: scale(1);
 }
 
 .viewAllButton:hover::after {
-  transform: translateX(4px);
+  transform: translateX(5px) scale(1.1);
 }
 
 @media (max-width: 1024px) {
   .eventsContent {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   .recentEventContainer,
@@ -332,12 +453,12 @@
   }
 
   .eventCard.recent .eventImage {
-    height: 350px;
+    height: 300px;
   }
 
-  .eventImage {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  .eventCard:not(.recent) {
+    height: auto;
+    min-height: 180px;
   }
 }
 
@@ -351,151 +472,89 @@
   }
 
   .eventCard.recent .eventImage {
-    height: 300px;
+    height: 250px;
   }
 
   .eventCard:not(.recent) {
-    height: auto;
     flex-direction: column;
-    padding: 1.5rem;
+    height: auto;
+    min-height: auto;
   }
 
   .eventCard:not(.recent) .eventImage {
     width: 100%;
-    height: 250px;
-  }
-  
-  .eventImage {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-  
-  .eventImage:hover {
-    transform: translateY(-2px) scale(1.005);
+    height: 200px;
   }
 
-  .eventCard.recent .eventDate,
-  .eventCard:not(.recent) .eventDate {
-    padding-right: 0.8rem;
-    border-right-width: 1px;
+  .eventCard:not(.recent) .eventContent {
+    padding-right: 0;
   }
 
   .viewAllButton {
-    padding: 0.6rem 1.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .readMoreButton {
+    align-self: flex-start;
   }
 }
 
-/* Base image styles */
-.eventImage {
-  width: 100%;
-  object-fit: contain;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.1)
-  );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.12),
-    0 1px 3px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 0 20px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-.eventImage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  pointer-events: none;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(174, 89, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(174, 89, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(174, 89, 255, 0.3);
+  }
 }
 
-.eventImage:hover {
-  transform: translateY(-3px) scale(1.01);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.15)
-  );
-  box-shadow: 
-    0 8px 16px rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 30px rgba(0, 0, 0, 0.08);
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Recent event specific styles */
-.eventCard.recent .eventImage {
-  height: 400px;
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Other event specific styles */
-.eventCard:not(.recent) .eventImage {
-  height: 180px;
-  width: 200px;
-  flex-shrink: 0;
-  border-radius: 16px;
+/* Animation classes that will be added when section is in view */
+.events.inView .recentEventContainer {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* For other event cards */
-.otherEventCard .eventImage {
-  height: 180px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0.1)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 3px 4px rgba(0, 0, 0, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 0 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.events.inView .otherEventsContainer {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.otherEventCard .eventImage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  pointer-events: none;
-}
-
-.otherEventCard .eventImage:hover {
-  transform: translateY(-2px) scale(1.01);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.15)
-  );
-  box-shadow: 
-    0 6px 12px rgba(0, 0, 0, 0.15),
-    0 2px 3px rgba(0, 0, 0, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 25px rgba(0, 0, 0, 0.08);
+.events.inView .eventCard:not(.recent) {
+  opacity: 1;
+  transform: translateX(0);
 }
