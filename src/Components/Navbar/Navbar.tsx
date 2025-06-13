@@ -1,5 +1,5 @@
 import styles from './Navbar.module.css';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { ULearn } from "../../assets/svg/svg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -16,55 +16,63 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  const navContent = ["home", "about", "achievements", "events", "gallery", "team", "contact"];
+  const navContent = ["Home", "About", "Events", "Achievements", "Gallery", "Team", "Contact"];
+
+  const scrollToSection = useCallback((sectionId: string) => {
+    const section = document.getElementById(sectionId.toLowerCase());
+    if (section) {
+      const navbarHeight = 80; // Approximate navbar height
+      const sectionTop = section.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: 'smooth'
+      });
+    }
+  }, []);
 
   const handleNavClick = (content: string, e: React.MouseEvent) => {
-    if (location.pathname === "/all-events" && content === "events") {
-      e.preventDefault();
+    e.preventDefault();
+    const sectionId = content.toLowerCase();
+    
+    if (location.pathname === "/all-events" && content === "Events") {
       navigate('/');
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const eventsSection = document.getElementById('events');
-        if (eventsSection) {
-          eventsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      setTimeout(() => scrollToSection(sectionId), 100);
+    } else {
+      scrollToSection(sectionId);
     }
   };
+
+  const updateActiveSection = useCallback(() => {
+    const scrollPosition = window.scrollY + 100;
+    const sections = navContent.map(section => ({
+      id: section.toLowerCase(),
+      element: document.getElementById(section.toLowerCase())
+    }));
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      if (section.element && section.element.offsetTop <= scrollPosition) {
+        setActiveSection(section.id);
+        break;
+      }
+    }
+  }, [navContent]);
 
   useEffect(() => {
     if (location.pathname === "/all-events") {
       setActiveSection("events");
     } else {
-      const handleScroll = () => {
-        window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
-        
-        const sections = navContent.map(section => document.getElementById(section));
-        const scrollPosition = window.scrollY + 100;
-
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const section = sections[i];
-          if (section && section.offsetTop <= scrollPosition) {
-            setActiveSection(navContent[i]);
-            break;
-          }
-        }
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", updateActiveSection);
+      return () => window.removeEventListener("scroll", updateActiveSection);
     }
-  }, [location.pathname, navContent]);
-
-  const changeNavBg = () => {
-    window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
-  };
+  }, [location.pathname, updateActiveSection]);
 
   useEffect(() => {
-    window.addEventListener("scroll", changeNavBg);
-    return () => {
-      window.removeEventListener("scroll", changeNavBg);
+    const handleScroll = () => {
+      setNavBg(window.scrollY >= 150);
     };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -75,7 +83,7 @@ const Navbar = () => {
       }}
     >
       <div className={styles.navbarLeft}>
-        <a href="#home">
+        <a href="#home" onClick={(e) => handleNavClick("Home", e)}>
           <ULearn />
           <p>{data.collegeCode}</p>
         </a>
@@ -84,48 +92,16 @@ const Navbar = () => {
         <div>
           {navContent.map((content, i) => (
             <a 
-              href={`#${content}`} 
+              href={`#${content.toLowerCase()}`} 
               key={i.toString() + content}
               onClick={(e) => handleNavClick(content, e)}
+              className={styles.navLink}
               style={{
-                display: "inline-block",
-                padding: "0 4px",
-                marginBottom: "4px"
+                color: activeSection === content.toLowerCase() ? "#ae59ff" : "inherit",
+                fontWeight: activeSection === content.toLowerCase() ? "600" : "400"
               }}
             >
-              <div
-                style={{
-                  position: "relative",
-                  height: "22px",
-                  display: "flex",
-                  alignItems: "center"
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: 600,
-                    color: activeSection === content ? "#ae59ff" : "inherit",
-                    transition: "all 0.3s ease",
-                    margin: 0
-                  }}
-                >
-                  {content}
-                </p>
-                {activeSection === content && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "-4px",
-                      left: 0,
-                      width: "100%",
-                      height: "4px",
-                      backgroundColor: "#ae59ff",
-                      borderRadius: "2px"
-                    }}
-                  />
-                )}
-              </div>
+              {content}
             </a>
           ))}
         </div>
@@ -144,47 +120,16 @@ const Navbar = () => {
           <div>
             {navContent.map((content, i) => (
               <a 
-                href={`#${content}`} 
+                href={`#${content.toLowerCase()}`} 
                 key={i.toString() + content}
                 onClick={(e) => handleNavClick(content, e)}
+                className={styles.mobileNavLink}
                 style={{
-                  display: "block",
-                  padding: "8px 4px",
-                  marginBottom: "4px"
+                  color: activeSection === content.toLowerCase() ? "#ae59ff" : "white",
+                  fontWeight: activeSection === content.toLowerCase() ? "600" : "400"
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    height: "22px",
-                    display: "flex",
-                    alignItems: "center"
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "18px",
-                      color: activeSection === content ? "#ae59ff" : "inherit",
-                      transition: "all 0.3s ease",
-                      margin: 0
-                    }}
-                  >
-                    {content}
-                  </p>
-                  {activeSection === content && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "-4px",
-                        left: 0,
-                        width: "100%",
-                        height: "4px",
-                        backgroundColor: "#ae59ff",
-                        borderRadius: "2px"
-                      }}
-                    />
-                  )}
-                </div>
+                {content}
               </a>
             ))}
             <button>

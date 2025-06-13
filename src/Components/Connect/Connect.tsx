@@ -5,7 +5,7 @@ import data from "/data.json"
 
 const Connect = () => {
     return (
-        <div id="contact" className={styles.ConnectWrapper}>
+        <div className={styles.ConnectWrapper} id="contact">
             <h1>Connect With Us</h1>
             <div className={styles.contentWrapper}>
                 <div className={styles.innerContent}>

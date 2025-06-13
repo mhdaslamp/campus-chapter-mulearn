@@ -5,7 +5,7 @@ import data from '/data.json'
 
 const Home = () => {
     return (
-        <div id="home" className={styles.HomeWrapper}>
+        <div className={styles.HomeWrapper} id="home">
             <div className={styles.contentWraper}>
                 <h1>Welcome to the</h1>
                 <h2>µverse</h2>

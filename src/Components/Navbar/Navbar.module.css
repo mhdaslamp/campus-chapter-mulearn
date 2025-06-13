@@ -144,3 +144,59 @@
     padding: 10px 25px 0px;
   }
 }
+
+.navLink {
+  display: inline-block;
+  padding: 0 4px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ae59ff;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navLink:hover::after,
+.navLink[style*="color: rgb(174, 89, 255)"]::after {
+  transform: scaleX(1);
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 8px 4px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mobileNavLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ae59ff;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.mobileNavLink:hover::after,
+.mobileNavLink[style*="color: rgb(174, 89, 255)"]::after {
+  transform: scaleX(1);
+}

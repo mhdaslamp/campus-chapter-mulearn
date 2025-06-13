@@ -74,7 +74,7 @@ const Events: React.FC = () => {
   };
 
   return (
-    <div id="events" className={styles.events}>
+    <div className={styles.events} id="events">
       <h2>Our Event Journey</h2>
       <div className={styles.yearSelector}>
         {years.map((year) => (
@@ -88,34 +88,36 @@ const Events: React.FC = () => {
         ))}
       </div>
       <div className={styles.eventsContainer}>
-        {/* Recent Event - Left Side */}
-        {recentEvent && (
-          <div className={styles.recentEventContainer}>
-            <div className={`${styles.eventCard} ${styles.recent}`}>
-              <div className={styles.eventDate}>{`${recentEvent.month} ${recentEvent.date}`}</div>
-              <img src={recentEvent.img} alt={recentEvent.head} className={styles.eventImage} />
-              <div className={styles.eventContent}>
-                <h3 className={styles.eventTitle}>{recentEvent.head}</h3>
-                <p className={styles.eventDescription}>{recentEvent.para}</p>
+        <div className={styles.eventsContent}>
+          {/* Recent Event - Left Side */}
+          {recentEvent && (
+            <div className={styles.recentEventContainer}>
+              <div className={`${styles.eventCard} ${styles.recent}`}>
+                <div className={styles.eventDate}>{`${recentEvent.month} ${recentEvent.date}`}</div>
+                <img src={recentEvent.img} alt={recentEvent.head} className={styles.eventImage} />
+                <div className={styles.eventContent}>
+                  <h3 className={styles.eventTitle}>{recentEvent.head}</h3>
+                  <p className={styles.eventDescription}>{recentEvent.para}</p>
+                </div>
               </div>
             </div>
+          )}
+          {/* Other Events - Right Side */}
+          <div className={styles.otherEventsContainer}>
+            {otherEvents.map((event: EventDetail, index: number) => (
+              <div key={index} className={styles.eventCard}>
+                <div className={styles.eventDate}>{`${event.month} ${event.date}`}</div>
+                <img src={event.img} alt={event.head} className={styles.eventImage} />
+                <div className={styles.eventContent}>
+                  <h3 className={styles.eventTitle}>{event.head}</h3>
+                  <p className={styles.eventDescription}>{event.para}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        )}
-        {/* Other Events - Right Side */}
-        <div className={styles.otherEventsContainer}>
-          {otherEvents.map((event: EventDetail, index: number) => (
-            <div key={index} className={styles.eventCard}>
-              <div className={styles.eventDate}>{`${event.month} ${event.date}`}</div>
-              <img src={event.img} alt={event.head} className={styles.eventImage} />
-              <div className={styles.eventContent}>
-                <h3 className={styles.eventTitle}>{event.head}</h3>
-                <p className={styles.eventDescription}>{event.para}</p>
-              </div>
-            </div>
-          ))}
         </div>
+        <button className={styles.viewAllButton} onClick={handleViewAll}>View All Events</button>
       </div>
-      <button className={styles.viewAllButton} onClick={handleViewAll}>View All Events</button>
     </div>
   );
 };

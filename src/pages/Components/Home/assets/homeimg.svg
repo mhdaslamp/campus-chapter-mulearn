@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E85FE" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#AF2EE6" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="muGradient" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E85FE"/>
+      <stop offset="100%" stop-color="#AF2EE6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="400" cy="300" r="250" fill="url(#bgGradient)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="400" cy="300" r="200" stroke="url(#muGradient)" stroke-width="2" stroke-dasharray="10 10"/>
+  <circle cx="400" cy="300" r="150" stroke="url(#muGradient)" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- µ symbol -->
+  <path d="M350 200C350 150 400 100 450 100C500 100 550 150 550 200V400C550 450 500 500 450 500C400 500 350 450 350 400V200Z" 
+        fill="url(#muGradient)" fill-opacity="0.2"/>
+  
+  <!-- Decorative stars -->
+  <path d="M300 150L310 180L340 180L320 200L330 230L300 215L270 230L280 200L260 180L290 180L300 150Z" 
+        fill="#A2A2FB" fill-opacity="0.5"/>
+  <path d="M500 150L510 180L540 180L520 200L530 230L500 215L470 230L480 200L460 180L490 180L500 150Z" 
+        fill="#A2A2FB" fill-opacity="0.5"/>
+  <path d="M400 400L410 430L440 430L420 450L430 480L400 465L370 480L380 450L360 430L390 430L400 400Z" 
+        fill="#A2A2FB" fill-opacity="0.5"/>
+
+  <!-- Connection lines -->
+  <path d="M350 300L450 300" stroke="url(#muGradient)" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M400 200L400 400" stroke="url(#muGradient)" stroke-width="2" stroke-dasharray="5 5"/>
+</svg> 
