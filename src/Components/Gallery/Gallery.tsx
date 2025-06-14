@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Gallery.module.css";
 import data from '/data.json';
@@ -24,10 +24,15 @@ const Gallery = () => {
             }
         };
 
+        // Create an array of bound event handlers
+        const scrollHandlers = scrollRefs.current.map((_, index) => 
+            () => handleScroll(index)
+        );
+
         // Add scroll event listeners to all containers
         scrollRefs.current.forEach((container, index) => {
             if (container) {
-                container.addEventListener('scroll', () => handleScroll(index));
+                container.addEventListener('scroll', scrollHandlers[index]);
             }
         });
 
@@ -35,7 +40,7 @@ const Gallery = () => {
         return () => {
             scrollRefs.current.forEach((container, index) => {
                 if (container) {
-                    container.removeEventListener('scroll', () => handleScroll(index));
+                    container.removeEventListener('scroll', scrollHandlers[index]);
                 }
             });
         };
@@ -57,20 +62,26 @@ const Gallery = () => {
     };
 
     const renderImages = (images: { image: string }[], rowIndex: number) => {
-        // Create three sets of images for smoother infinite scroll
-        const triplicatedImages = [...images, ...images, ...images];
+        // Duplicate images to create seamless loop
+        const duplicatedImages = [...images, ...images];
         
         return (
             <>
-                {triplicatedImages.map((item, imgIndex) => (
-                    <div key={`row${rowIndex}-${imgIndex}`} className={styles.imgContainer}>
-                        <img 
-                            src={item.image} 
-                            loading="lazy" 
-                            alt={`Gallery image ${(imgIndex % images.length) + 1}`} 
-                        />
-                    </div>
-                ))}
+                {duplicatedImages.map((item, imgIndex) => {
+                    const originalIndex = imgIndex % images.length;
+                    return (
+                        <div key={`${rowIndex}-${imgIndex}`} className={styles.imgContainer}>
+                            <img
+                                src={item.image}
+                                alt={`Gallery memory ${originalIndex + 1} from row ${rowIndex + 1}`}
+                                loading="lazy"
+                                width="420"
+                                height="280"
+                                style={{ aspectRatio: '3/2' }}
+                            />
+                        </div>
+                    );
+                })}
             </>
         );
     };
@@ -95,7 +106,7 @@ const Gallery = () => {
                 >
                     <div 
                         ref={el => contentRefs.current[0] = el}
-                        className={styles.scrollableContent}
+                        className={`${styles.scrollableContent} ${styles.syncScroll}`}
                     >
                         {renderImages(data.gallery.row1, 0)}
                     </div>
@@ -129,7 +140,7 @@ const Gallery = () => {
                 >
                     <div 
                         ref={el => contentRefs.current[1] = el}
-                        className={styles.scrollableContent}
+                        className={`${styles.scrollableContent} ${styles.syncScroll}`}
                     >
                         {renderImages(data.gallery.row2, 1)}
                     </div>

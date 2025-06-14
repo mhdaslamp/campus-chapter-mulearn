@@ -10,12 +10,16 @@
   position: relative;
   gap: 3vh;
   overflow: hidden;
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
 }
 
 .HomeWrapper img {
   width: 100%;
-  animation: fadeIn 0.8s ease-out 0.3s backwards;
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .contentWraper {
@@ -25,7 +29,10 @@
   margin-top: 20vh;
   position: relative;
   z-index: 9900;
-  animation: slideUp 0.8s ease-out;
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .contentWraper h1 {
@@ -33,7 +40,10 @@
   line-height: 1;
   font-size: 7vw;
   font-weight: 600;
-  animation: fadeIn 0.8s ease-out 0.2s backwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s backwards;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .contentWraper h2 {
@@ -43,63 +53,183 @@
   font-weight: 700;
   margin-top: -3vw;
   color: #ae59ff;
-  animation: fadeIn 0.8s ease-out 0.4s backwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards,
+             pulseMu 3s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 15px rgba(174, 89, 255, 0.3));
 }
 
 .contentWraper p {
-  /* margin-top: -1vw; */
   font-size: 1.5vw;
   width: 25vw;
   text-align: center;
-  animation: fadeIn 0.8s ease-out 0.6s backwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
+/* Star and Mu Symbol Animations */
+.start1, .start2, .start3, .start4 {
+  position: absolute;
+  z-index: 7000;
+  animation: floatStar 8s ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 8px rgba(174, 89, 255, 0.3));
+}
+
+.start5, .start6, .start7, .start8 {
+  position: absolute;
+  z-index: 0;
+  animation: floatStar 10s ease-in-out infinite;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 6px rgba(174, 89, 255, 0.2));
+}
+
+/* Individual star positions and animations */
+.start1 { 
+  left: 15%; 
+  top: 25%; 
+  animation: floatStar 8s ease-in-out infinite, glowStar 4s ease-in-out infinite;
+  animation-delay: 0s, 0s;
+}
+
+.start2 { 
+  right: 10%; 
+  top: 30%; 
+  animation: floatStar 9s ease-in-out infinite, glowStar 4s ease-in-out infinite;
+  animation-delay: 1s, 0.5s;
+}
+
+.start3 { 
+  left: 27%; 
+  top: 12%; 
+  animation: floatStar 7s ease-in-out infinite, glowStar 4s ease-in-out infinite;
+  animation-delay: 2s, 1s;
+}
+
+.start4 { 
+  right: 27%; 
+  top: 28%; 
+  animation: floatStar 8.5s ease-in-out infinite, glowStar 4s ease-in-out infinite;
+  animation-delay: 3s, 1.5s;
+  }
+
+.start5 { 
+  right: 45%; 
+  top: 8%; 
+  animation: floatStar 10s ease-in-out infinite, glowStar 5s ease-in-out infinite;
+  animation-delay: 0.5s, 0.2s;
+}
+
+.start6 { 
+  left: -5%; 
+  top: 30%; 
+  animation: floatStar 9.5s ease-in-out infinite, glowStar 5s ease-in-out infinite;
+  animation-delay: 1.5s, 0.7s;
+}
+
+.start7 { 
+  right: -5%; 
+  top: 30%; 
+  animation: floatStar 11s ease-in-out infinite, glowStar 5s ease-in-out infinite;
+  animation-delay: 2.5s, 1.2s;
+}
+
+.start8 { 
+  right: 14%; 
+  top: 15%; 
+  animation: floatStar 10.5s ease-in-out infinite, glowStar 5s ease-in-out infinite;
+  animation-delay: 3.5s, 1.7s;
+  }
+
+/* Mu Symbol Animation */
+.contentWraper h2 {
+  margin: 0%;
+  line-height: 1;
+  font-size: 9vw;
+  font-weight: 700;
+  margin-top: -3vw;
+  color: #ae59ff;
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards,
+             pulseMu 3s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 15px rgba(174, 89, 255, 0.3));
+}
+
+@keyframes floatStar {
+  0% {
+    transform: translateY(0) translateZ(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) translateZ(0) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-20px) translateZ(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-12px) translateZ(0) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) translateZ(0) rotate(0deg);
+  }
+}
+
+@keyframes glowStar {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(174, 89, 255, 0.3));
+    opacity: 0.8;
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(174, 89, 255, 0.5));
+    opacity: 1;
+  }
+}
+
+@keyframes pulseMu {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(174, 89, 255, 0.3));
+    transform: scale(1) translateZ(0);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(174, 89, 255, 0.5));
+    transform: scale(1.02) translateZ(0);
+  }
+}
+
+/* Responsive adjustments for animations */
 @media screen and (max-width: 900px) {
-  .HomeWrapper {
-    overflow: hidden;
-  }
-
-  .HomeWrapper img {
-    width: 900px;
-  }
-
-  .contentWraper {
-    margin-top: 16vh;
-  }
-
-  .contentWraper h1 {
-    font-size: 9vw;
-  }
+  .start1 { left: 17%; top: 30%; }
+  .start2 { right: 10%; top: 30%; }
+  .start3 { left: 27%; top: 12%; }
+  .start4 { right: 18%; top: 26%; }
+  .start5 { right: 48%; top: 13%; }
+  .start6 { left: -4%; top: 40%; }
+  .start7 { right: -5%; top: 30%; }
+  .start8 { right: 7%; top: 17%; }
 
   .contentWraper h2 {
-    font-size: 15vw;
-    margin-top: -4vw;
-  }
-
-  .contentWraper p {
-    /* margin-top: -1vw; */
-    font-size: 2.4vw;
-    width: 43vw;
+    filter: drop-shadow(0 0 12px rgba(174, 89, 255, 0.25));
   }
 }
 
 @media screen and (max-width: 700px) {
-  .contentWraper {
-    margin-top: 20vh;
-  }
-
-  .contentWraper h1 {
-    font-size: 9.5vw;
-  }
+  .start1 { left: 13%; top: 30%; }
+  .start2 { right: 10%; top: 35%; }
+  .start3 { left: 27%; top: 15%; }
+  .start4 { right: 14%; top: 30%; }
+  .start5 { right: 48.5%; top: 15%; }
 
   .contentWraper h2 {
-    /* font-size: 17vw; */
-    margin-top: -4vw;
-  }
-
-  .contentWraper p {
-    /* margin-top: -1vw; */
-    font-size: 3vw;
+    filter: drop-shadow(0 0 10px rgba(174, 89, 255, 0.2));
   }
 }
 
@@ -114,135 +244,7 @@
   }
 
   .contentWraper p {
-    /* margin-top: -1vw; */
     font-size: 3vw;
-  }
-}
-
-.start1 {
-  position: absolute;
-  z-index: 7000;
-  left: 15%;
-  top: 25%;
-}
-
-.start2 {
-  position: absolute;
-  z-index: 7000;
-  right: 10%;
-  top: 30%;
-}
-
-.start3 {
-  position: absolute;
-  z-index: 7000;
-  left: 27%;
-  top: 12%;
-}
-
-.start4 {
-  position: absolute;
-  z-index: 7000;
-  right: 27%;
-  top: 28%;
-}
-
-.start5 {
-  position: absolute;
-  z-index: 0;
-  right: 45%;
-  top: 8%;
-}
-
-.start6 {
-  position: absolute;
-  z-index: 0;
-  left: -5%;
-  top: 30%;
-}
-
-.start7 {
-  position: absolute;
-  z-index: 0;
-  right: -5%;
-  top: 30%;
-}
-
-.start8 {
-  position: absolute;
-  z-index: 0;
-  right: 14%;
-  top: 15%;
-}
-
-@media screen and (max-width: 900px) {
-  .start1 {
-    left: 17%;
-    top: 30%;
-  }
-
-  .start2 {
-    right: 10%;
-    top: 30%;
-  }
-
-  .start3 {
-    left: 27%;
-    top: 12%;
-  }
-
-  .start4 {
-    right: 18%;
-    top: 26%;
-  }
-
-  .start5 {
-    right: 48%;
-    top: 13%;
-  }
-
-  .start6 {
-
-    left: -4%;
-    top: 40%;
-  }
-
-  .start7 {
-    right: -5%;
-    top: 30%;
-  }
-
-  .start8 {
-
-    right: 7%;
-    top: 17%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .start1 {
-    left: 13%;
-    top: 30%;
-  }
-
-  .start2 {
-    right: 10%;
-    top: 35%;
-  }
-
-  .start3 {
-    left: 27%;
-    top: 15%;
-  }
-
-  .start4 {
-    right: 14%;
-    top: 30%;
-  }
-
-  .start5 {
-    right: 48.5%;
-    top: 15%;
   }
 }
 
@@ -255,13 +257,24 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
   }
 }

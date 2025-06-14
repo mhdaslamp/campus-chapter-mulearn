@@ -43,8 +43,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_2454_303"
@@ -54,8 +54,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_2454_303"
@@ -65,8 +65,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_2454_303"
@@ -76,8 +76,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_2454_303"
@@ -87,8 +87,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_2454_303"
@@ -98,8 +98,8 @@ export const ULearn = () => {
           y2="69.9222"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2E85FE" />
-          <stop offset="0.940047" stop-color="#AF2EE6" />
+          <stop stopColor="#2E85FE" />
+          <stop offset="0.940047" stopColor="#AF2EE6" />
         </linearGradient>
       </defs>
     </svg>

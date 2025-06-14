@@ -87,12 +87,6 @@ const Events: React.FC = () => {
   const recentEvent = eventDetails[0];
   const otherEvents = eventDetails.slice(1, 4);
 
-  // Debug logs
-  console.log('Full data:', data);
-  console.log('Current year events:', eventDetails);
-  console.log('Recent Event:', recentEvent);
-  console.log('Other Events:', otherEvents);
-
   const years = eventsData.events.map(event => event.year).sort((a, b) => b - a);
 
   const handleYearChange = (year: number) => {
@@ -155,7 +149,7 @@ const Events: React.FC = () => {
                         Register (Deadline: {recentEvent.reg.deadline})
                       </a>
                     ) : (
-                      <span className={styles.regButton} style={{ background: '#ccc' }}>
+                      <span className={styles.closedRegMessage}>
                         Registration Closed
                       </span>
                     )
@@ -189,7 +183,7 @@ const Events: React.FC = () => {
                         Register (Deadline: {event.reg.deadline})
                       </a>
                     ) : (
-                      <span className={styles.regButton} style={{ background: '#ccc' }}>
+                      <span className={styles.closedRegMessage}>
                         Registration Closed
                       </span>
                     )

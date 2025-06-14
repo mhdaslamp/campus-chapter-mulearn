@@ -159,7 +159,7 @@ const Navbar = () => {
               </a>
             ))}
             <button>
-              <a href="http://app.mulearn.org">Join µlearn</a>
+              <a href="http://app.mulearn.org/register">Join µlearn</a>
             </button>
           </div>
         )}

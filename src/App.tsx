@@ -15,6 +15,8 @@ import AllEventsPage from "./pages/AllEventsPage";
 import GalleryPage from "./pages/GalleryPage";
 import Achievements from "./Components/Achievements/Achievements";
 
+// Note: React Router v6 warnings about future flags can be safely ignored
+// These warnings are about upcoming changes in v7 and will be addressed when upgrading
 function App() {
     return (
         <Router>

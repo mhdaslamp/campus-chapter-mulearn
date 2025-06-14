@@ -29,10 +29,15 @@ const Achievements: React.FC = () => {
       }
     };
 
+    // Create an array of bound event handlers
+    const scrollHandlers = scrollRefs.current.map((_, index) => 
+      () => handleScroll(index)
+    );
+
     // Add scroll event listeners to all containers
     scrollRefs.current.forEach((container, index) => {
       if (container) {
-        container.addEventListener('scroll', () => handleScroll(index));
+        container.addEventListener('scroll', scrollHandlers[index]);
       }
     });
 
@@ -40,7 +45,7 @@ const Achievements: React.FC = () => {
     return () => {
       scrollRefs.current.forEach((container, index) => {
         if (container) {
-          container.removeEventListener('scroll', () => handleScroll(index));
+          container.removeEventListener('scroll', scrollHandlers[index]);
         }
       });
     };
@@ -62,20 +67,26 @@ const Achievements: React.FC = () => {
   };
 
   const renderImages = (images: string[], achievementTitle: string) => {
-    // Create three sets of images for smoother infinite scroll
-    const triplicatedImages = [...images, ...images, ...images];
+    // Only duplicate images once instead of three times
+    const duplicatedImages = [...images, ...images];
     
     return (
       <>
-        {triplicatedImages.map((src, imgIndex) => (
-          <div key={`${achievementTitle}-${imgIndex}`} className={styles.imgContainer}>
-            <img
-              src={src}
-              alt={`${achievementTitle} - Image ${(imgIndex % images.length) + 1}`}
-              loading="lazy"
-            />
-          </div>
-        ))}
+        {duplicatedImages.map((src, imgIndex) => {
+          const originalIndex = imgIndex % images.length;
+          return (
+            <div key={`${achievementTitle}-${imgIndex}`} className={styles.imgContainer}>
+              <img
+                src={src}
+                alt={`${achievementTitle} achievement - Image ${originalIndex + 1} of ${images.length}`}
+                loading="lazy"
+                width="450"
+                height="350"
+                style={{ aspectRatio: '9/7' }}
+              />
+            </div>
+          );
+        })}
       </>
     );
   };

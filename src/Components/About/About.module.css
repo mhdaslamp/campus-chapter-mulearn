@@ -28,10 +28,10 @@
   background: none;
   border: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   transition: all 0.3s;
   display: inline;
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
   cursor: pointer;
   padding: 0;
   text-decoration: none;
@@ -60,5 +60,10 @@
 
   .AboutWrapper p {
     font-size: .8rem;
+  }
+
+  .readMoreLink {
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
   }
 }

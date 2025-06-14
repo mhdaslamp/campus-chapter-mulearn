@@ -558,3 +558,109 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Active Registration Button Styles */
+.regButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(145deg, #ae59ff, #9042EB);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+    box-shadow: 
+        0 2px 4px rgba(174, 89, 255, 0.2),
+        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    min-width: 120px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Closed Registration Message Styles */
+.closedRegMessage {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+    position: relative;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.closedRegMessage::before {
+    content: '•';
+    position: absolute;
+    left: 0.5rem;
+    color: #9ca3af;
+}
+
+/* Button hover and active states */
+.regButton::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.regButton::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(145deg, #ae59ff, #9042EB);
+    border-radius: 0.7rem;
+    z-index: -1;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(174, 89, 255, 0.25);
+}
+
+.regButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 4px 8px rgba(174, 89, 255, 0.25),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+    background: linear-gradient(145deg, #9042EB, #ae59ff);
+}
+
+.regButton:hover::before {
+    transform: translateX(100%);
+}
+
+.regButton:hover::after {
+    background: linear-gradient(145deg, #9042EB, #ae59ff);
+    filter: brightness(1.1);
+}
+
+.regButton:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 1px 2px rgba(174, 89, 255, 0.2),
+        inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
