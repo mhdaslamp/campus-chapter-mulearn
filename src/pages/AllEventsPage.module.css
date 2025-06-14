@@ -15,7 +15,8 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  padding-top: 2rem;
+  padding-top: 6rem;
+  width: 100%;
 }
 
 .header h1 {
@@ -190,10 +191,19 @@
 @media (max-width: 768px) {
   .allEventsPage {
     padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .header {
+    padding-top: 4rem;
+    margin-bottom: 1.5rem;
   }
 
   .header h1 {
     font-size: 2rem;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .yearButton {
@@ -217,5 +227,19 @@
 
   .eventTitle {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allEventsPage {
+    padding-top: 4rem;
+  }
+
+  .header {
+    padding-top: 3rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
   }
 } 

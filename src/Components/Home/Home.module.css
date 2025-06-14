@@ -10,10 +10,12 @@
   position: relative;
   gap: 3vh;
   overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
 }
 
 .HomeWrapper img {
   width: 100%;
+  animation: fadeIn 0.8s ease-out 0.3s backwards;
 }
 
 .contentWraper {
@@ -23,6 +25,7 @@
   margin-top: 20vh;
   position: relative;
   z-index: 9900;
+  animation: slideUp 0.8s ease-out;
 }
 
 .contentWraper h1 {
@@ -30,6 +33,7 @@
   line-height: 1;
   font-size: 7vw;
   font-weight: 600;
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
 }
 
 .contentWraper h2 {
@@ -39,6 +43,7 @@
   font-weight: 700;
   margin-top: -3vw;
   color: #ae59ff;
+  animation: fadeIn 0.8s ease-out 0.4s backwards;
 }
 
 .contentWraper p {
@@ -46,6 +51,7 @@
   font-size: 1.5vw;
   width: 25vw;
   text-align: center;
+  animation: fadeIn 0.8s ease-out 0.6s backwards;
 }
 
 @media screen and (max-width: 900px) {
@@ -237,5 +243,25 @@
   .start5 {
     right: 48.5%;
     top: 15%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -12,16 +12,44 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const navContent = ["Home", "About", "Events", "Achievements", "Gallery", "Team", "Contact"];
+
+  const updateActiveSection = useCallback(() => {
+    const scrollPosition = window.scrollY + 100;
+    const sections = navContent.map(section => ({
+      id: section.toLowerCase(),
+      element: document.getElementById(section.toLowerCase())
+    }));
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      if (section.element && section.element.offsetTop <= scrollPosition) {
+        setActiveSection(section.id);
+        break;
+      }
+    }
+  }, [navContent]);
+
   // Scroll to top on page load/refresh
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Update active section based on current path
+  useEffect(() => {
+    if (location.pathname === "/all-events") {
+      setActiveSection("events");
+    } else if (location.pathname === "/gallery") {
+      setActiveSection("gallery");
+    } else {
+      window.addEventListener("scroll", updateActiveSection);
+      return () => window.removeEventListener("scroll", updateActiveSection);
+    }
+  }, [location.pathname, updateActiveSection]);
+
   function openMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
-
-  const navContent = ["Home", "About", "Events", "Achievements", "Gallery", "Team", "Contact"];
 
   const scrollToSection = useCallback((sectionId: string) => {
     const section = document.getElementById(sectionId.toLowerCase());
@@ -54,35 +82,16 @@ const Navbar = () => {
     if (location.pathname === "/all-events" && content === "Events") {
       navigate('/');
       setTimeout(() => scrollToSection(sectionId), 100);
+    } else if (location.pathname === "/gallery" && content === "Gallery") {
+      navigate('/');
+      setTimeout(() => scrollToSection(sectionId), 100);
+    } else if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection(sectionId), 100);
     } else {
       scrollToSection(sectionId);
     }
   };
-
-  const updateActiveSection = useCallback(() => {
-    const scrollPosition = window.scrollY + 100;
-    const sections = navContent.map(section => ({
-      id: section.toLowerCase(),
-      element: document.getElementById(section.toLowerCase())
-    }));
-
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const section = sections[i];
-      if (section.element && section.element.offsetTop <= scrollPosition) {
-        setActiveSection(section.id);
-        break;
-      }
-    }
-  }, [navContent]);
-
-  useEffect(() => {
-    if (location.pathname === "/all-events") {
-      setActiveSection("events");
-    } else {
-      window.addEventListener("scroll", updateActiveSection);
-      return () => window.removeEventListener("scroll", updateActiveSection);
-    }
-  }, [location.pathname, updateActiveSection]);
 
   useEffect(() => {
     const handleScroll = () => {

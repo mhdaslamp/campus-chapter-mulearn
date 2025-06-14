@@ -12,6 +12,7 @@ import Team from "./Components/Team/Team";
 import Connect from "./Components/Connect/Connect";
 import Footer from "./Components/Footer/Footer";
 import AllEventsPage from "./pages/AllEventsPage";
+import GalleryPage from "./pages/GalleryPage";
 import Achievements from "./Components/Achievements/Achievements";
 
 function App() {
@@ -37,6 +38,13 @@ function App() {
                     <>
                         <Navbar />
                         <AllEventsPage />
+                        <Footer />
+                    </>
+                } />
+                <Route path="/gallery" element={
+                    <>
+                        <Navbar />
+                        <GalleryPage />
                         <Footer />
                     </>
                 } />

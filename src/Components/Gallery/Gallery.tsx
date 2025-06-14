@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Gallery.module.css";
 import data from '/data.json';
 
@@ -146,12 +147,12 @@ const Gallery = () => {
             </div>
 
             <div className={styles.viewAllContainer}>
-                <a 
-                    href="/gallery" 
+                <Link 
+                    to="/gallery" 
                     className={styles.viewAllButton}
                 >
                     View All Gallery
-                </a>
+                </Link>
             </div>
         </div>
     );

@@ -1,93 +1,230 @@
 .galleryPage {
-    width: 100%;
     min-height: 100vh;
-    padding: 1.5rem 2rem;
-    background: #f8f9fa;
+    padding: 120px 5% 50px;
+    background: linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 80px;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.backButton {
-    color: #ae59ff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-.backButton:hover {
-    color: #9042EB;
-    transform: translateX(-4px);
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .header h1 {
-    color: #ae59ff;
     font-size: 2.5rem;
-    text-align: center;
+    color: #9042EB;
     margin: 0;
 }
 
 .galleryGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 1rem;
+    gap: 20px;
+    padding: 20px 0;
+    flex: 1;
 }
 
 .galleryItem {
     position: relative;
-    border-radius: 1rem;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    aspect-ratio: 4/3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+    cursor: pointer;
 }
 
 .galleryItem:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .galleryItem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .galleryItem:hover img {
     transform: scale(1.05);
 }
 
+/* Image Popup Styles */
+.imagePopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 80px 20px 20px;
+    animation: fadeIn 0.3s ease;
+    overflow-y: auto;
+}
+
+.popupContent {
+    position: relative;
+    max-width: 90vw;
+    max-height: calc(100vh - 100px);
+    animation: scaleIn 0.3s ease;
+    margin: auto;
+    scroll-margin-top: 100px;
+}
+
+.popupContent img {
+    max-width: 100%;
+    max-height: calc(100vh - 100px);
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+.closeButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1001;
+}
+
+.closeButton:hover {
+    transform: scale(1.1);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.closeButton svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Back Button Styles */
+.backButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #9042EB;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+.backButton svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.backButton:hover {
+    color: #ae59ff;
+    transform: translateX(-5px);
+}
+
+.backButton:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .galleryPage {
-        padding: 1rem;
-    }
-
-    .galleryGrid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1rem;
+        padding: 100px 20px 30px;
     }
 
     .header h1 {
         font-size: 2rem;
     }
+
+    .galleryGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .backButton {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .popupContent {
+        max-width: 95vw;
+    }
+
+    .closeButton {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .galleryGrid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .galleryPage {
+        padding: 80px 15px 20px;
     }
 
     .header h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+    }
+
+    .galleryGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .popupContent {
+        max-width: 95vw;
+    }
+
+    .closeButton {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
     }
 } 

@@ -87,38 +87,59 @@
 }
 
 .navbarMobile>div {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 9999;
   backdrop-filter: blur(8px);
-  padding: 8px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 20px 0 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  height: 40vh;
-  width: 50vw;
-  justify-content: space-between;
-  padding: 10px;
+  gap: 8px;
+  min-height: 60vh;
+  width: 60vw;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 80px;
+  margin-right: 10px;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .navbarMobile>div>a>p {
   color: white;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 500;
   text-transform: capitalize;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbarMobile>div>a>p:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbarMobile>div>button>a {
   color: white;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 8px 20px;
+  background-color: #6f6fff;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
 .navbarMobile .hamburger {
   font-size: 30px;
   position: relative;
   right: -1rem;
+  z-index: 10000;
+  margin-top: 5px;
 }
 
 /* 
@@ -137,11 +158,36 @@
     flex-direction: row-reverse;
     align-items: baseline;
   }
+
+  .navbarWrapper {
+    padding: 15px 0;
+  }
 }
 
 @media(width<498px) {
   .navbarLeft {
     padding: 10px 25px 0px;
+  }
+
+  .navbarMobile>div {
+    width: 70vw;
+    min-height: 70vh;
+    padding: 20px 12px;
+    margin-right: 8px;
+    margin-top: 75px;
+    gap: 6px;
+  }
+
+  .navbarMobile>div>a>p,
+  .navbarMobile>div>button>a {
+    font-size: 20px;
+    padding: 6px 0;
+  }
+
+  .mobileNavLink {
+    padding: 6px 4px;
+    margin-bottom: 2px;
+    font-size: 18px;
   }
 }
 
@@ -175,12 +221,15 @@
 
 .mobileNavLink {
   display: block;
-  padding: 8px 4px;
+  padding: 8px 6px;
   margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .mobileNavLink::after {
@@ -199,4 +248,8 @@
 .mobileNavLink:hover::after,
 .mobileNavLink[style*="color: rgb(174, 89, 255)"]::after {
   transform: scaleX(1);
+}
+
+.mobileNavLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

@@ -494,7 +494,7 @@
     padding: 0.7rem 1.8rem;
     font-size: 0.95rem;
   }
-
+  
   .readMoreButton {
     align-self: flex-start;
   }
@@ -536,7 +536,7 @@
   from {
     opacity: 0;
     transform: translateX(50px);
-  }
+}
   to {
     opacity: 1;
     transform: translateX(0);
