@@ -14,7 +14,12 @@
           "date": "12",
           "head": "Karmayottam",
           "para": "7 days of growth, productivity, action & rewards! Take on meaningful tasks, level up your skills & rise on the leaderboard!.The more tasks you complete, the higher you rise!.",
-          "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg"
+          "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg",
+          "reg": { 
+                "isOpen": true,
+                "link": "https://tinyurl.com/karmayottam", 
+                "deadline": "2025-06-15" 
+          }
         },
         
         {
@@ -22,7 +27,12 @@
           "date": "28",
           "head": "CodeSprint 30",
           "para": "GDG GEC Palakkad and μLearn GECSKP launched a 30-day upskilling program starting May 28, focusing on resumes, interviews, and internships.Participants geared up for career success with expert-led sessions and hands-on guidance.",
-          "img": "https://i.postimg.cc/fRLHR65Z/Code-sprint.jpg"
+          "img": "https://i.postimg.cc/fRLHR65Z/Code-sprint.jpg",
+          "reg": { 
+            "isOpen": false,
+            "link": "https://example.com/register", 
+            "deadline": "2025-06-01" 
+      }
         },
         {
           "month": "April",
@@ -126,7 +136,7 @@
           "month": "Dec",
           "date": "27",
           "head": "Malabari Santa",
-          "para": "Northzone and GECSKP organized a thrilling animation challenge called Malabari Santa, showcasing creative depictions of Santa adapting to Kerala’s culture.",
+          "para": "Northzone and GECSKP organized a thrilling animation challenge called Malabari Santa, showcasing creative depictions of Santa adapting to Kerala's culture.",
           "img": "https://i.postimg.cc/JnNLMrL4/malabari-santa.jpg"
         }
       ]
@@ -135,7 +145,7 @@
   "achievements": [
     {
     "title": "4th Best Campus Award at Perµte'25",
-      "description":"We’re proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
+      "description":"We're proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
       "images": [
         "https://i.postimg.cc/rps6GpLH/m0.png",
         "https://i.postimg.cc/sD4btWj8/m1.png",

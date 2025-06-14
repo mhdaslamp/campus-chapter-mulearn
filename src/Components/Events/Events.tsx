@@ -9,6 +9,7 @@ interface EventDetail {
   head: string;
   para: string;
   img: string;
+  reg?: { isOpen: boolean; link: string; deadline: string };
 }
 
 interface YearEvent {
@@ -143,6 +144,22 @@ const Events: React.FC = () => {
                 <div className={styles.eventContent}>
                   <h3 className={styles.eventTitle}>{recentEvent.head}</h3>
                   <p className={styles.eventDescription}>{recentEvent.para}</p>
+                  {recentEvent.reg && (
+                    recentEvent.reg.isOpen ? (
+                      <a
+                        href={recentEvent.reg.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.regButton}
+                      >
+                        Register (Deadline: {recentEvent.reg.deadline})
+                      </a>
+                    ) : (
+                      <span className={styles.regButton} style={{ background: '#ccc' }}>
+                        Registration Closed
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -161,6 +178,22 @@ const Events: React.FC = () => {
                   <p className={`${styles.eventDescription} ${!expandedCards.includes(index) ? styles.collapsed : ''}`}>
                     {event.para}
                   </p>
+                  {event.reg && (
+                    event.reg.isOpen ? (
+                      <a
+                        href={event.reg.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.regButton}
+                      >
+                        Register (Deadline: {event.reg.deadline})
+                      </a>
+                    ) : (
+                      <span className={styles.regButton} style={{ background: '#ccc' }}>
+                        Registration Closed
+                      </span>
+                    )
+                  )}
                   {isDescriptionLong(event.para) && (
                     <button
                       className={`${styles.readMoreButton} ${expandedCards.includes(index) ? styles.expanded : ''}`}
