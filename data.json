@@ -10,13 +10,24 @@
       "year": 2025,
       "eventDetails": [
         {
+          "month": "july",
+          "date": "14",
+          "head": " LET’S FIGMA!",
+          "para": "Join our fun, beginner-friendly Figma workshop on July 14 & 15, from 4:30–6:00 PM in CS115! No experience needed — just bring your laptop and energy. Let’s design something awesome together!",
+          "img": "https://i.postimg.cc/25V1qrX7/Lets-Figma.jpg",
+          "reg": { 
+                "isOpen": true,
+                "link": "https://forms.gle/qC2KDhSHbvToAKLi7 ", 
+                "deadline": "2025-06-15" 
+          }
+        }, {
           "month": "Jun",
           "date": "12",
           "head": "Karmayottam",
           "para": "7 days of growth, productivity, action & rewards! Take on meaningful tasks, level up your skills & rise on the leaderboard!.The more tasks you complete, the higher you rise!.",
           "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg",
           "reg": { 
-                "isOpen": true,
+                "isOpen": false,
                 "link": "https://tinyurl.com/karmayottam", 
                 "deadline": "2025-06-15" 
           }
