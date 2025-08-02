@@ -10,13 +10,26 @@
       "year": 2025,
       "eventDetails": [
         {
+          "month": "Aug",
+          "date": "8",
+          "head": "KARMA-YUGAM 2.0",
+          "para": "A Classwise Karma Battle by μLearn GEC SKP.🚀 Every task you take, every skill you build, it all adds up. Compete not just for yourself, but for your entire class! Victory favors the relentless",
+          "img": "https://i.postimg.cc/ZnS4dPbH/karmayugam2.jpg",
+          "reg": { 
+                "isOpen": true,
+                "link": "https://forms.gle/2nJk2rui967L1CSGA", 
+                "deadline": "2025-08-08" 
+          }
+        
+      },
+        {
           "month": "July",
           "date": "14",
           "head": " LET’S FIGMA!",
           "para": "Join our fun, beginner-friendly Figma workshop on July 14 & 15, from 4:30–6:00 PM in CS115! No experience needed — just bring your laptop and energy. Let’s design something awesome together!",
           "img": "https://i.postimg.cc/25V1qrX7/Lets-Figma.jpg",
           "reg": { 
-                "isOpen": true,
+                "isOpen": false,
                 "link": "https://forms.gle/qC2KDhSHbvToAKLi7 ", 
                 "deadline": "2025-06-15" 
           }
