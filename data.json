@@ -11,6 +11,20 @@
       "eventDetails": [
         {
           "month": "Aug",
+          "date": "4",
+          "head": "Call For Class Coordinators",
+          "para": "The battlefield is ready. Now we need leaders.Step up as a Class Coordinator and lead your tribe to victory! ",
+          "img": " https://postimg.cc/dDhwrsmw",
+          "reg": { 
+                "isOpen": true,
+                "link": "https://forms.gle/VnPs57vDemPwq3Kz8", 
+                "deadline": "" 
+          }
+        
+      },
+        
+        {
+          "month": "Aug",
           "date": "8",
           "head": "KARMA-YUGAM 2.0",
           "para": "A Classwise Karma Battle by μLearn GEC SKP.🚀 Every task you take, every skill you build, it all adds up. Compete not just for yourself, but for your entire class! Victory favors the relentless",
@@ -18,7 +32,7 @@
           "reg": { 
                 "isOpen": true,
                 "link": "https://forms.gle/2nJk2rui967L1CSGA", 
-                "deadline": "2025-08-05" 
+                "deadline": "" 
           }
         
       },
