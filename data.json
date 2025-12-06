@@ -1,76 +1,24 @@
 {
   "collegeCode": "GECSKP",
-
-  "college": "Government Engineering College      Sreekrishnapuram",
-
+  "college": "Government Engineering College     Sreekrishnapuram",
   "about": "µLearn GECSKP was officially established on October 20, 2023, with the vision of embodying a synergic philosophy of education and fostering a culture of mutual learning through micro peer groups. With Reny Mathew as the campus lead and Anoop S K M (Assistant Professor - IT)as the faculty enabler, µLearn embarked on a journey to assist students in breaking through echo chambers and freeing themselves from the shackles of conventional thinking.In January 2024, µLearn formed its Executive Committee (Execom), comprised of dedicated student leaders committed to advancing the club's mission and vision..",
-
   "events": [
     {
       "year": 2025,
       "eventDetails": [
         {
-          "month": "Aug",
-          "date": "4",
-          "head": "Call For Class Coordinators",
-          "para": "The battlefield is ready. Now we need leaders.Step up as a Class Coordinator and lead your tribe to victory! ",
-          "img": "https://i.postimg.cc/JzpmKdzG/call-for-class-coordinators.jpg",
-          "reg": { 
-                "isOpen": true,
-                "link": "https://forms.gle/VnPs57vDemPwq3Kz8", 
-                "deadline": "Aug 4 at 3pm" 
-          }
-        
-      },
-        
-        {
-          "month": "Aug",
-          "date": "8",
-          "head": "KARMA-YUGAM 2.0",
-          "para": "A Classwise Karma Battle by μLearn GEC SKP.🚀 Every task you take, every skill you build, it all adds up. Compete not just for yourself, but for your entire class! Victory favors the relentless",
-          "img": "https://i.postimg.cc/ZnS4dPbH/karmayugam2.jpg",
-          "reg": { 
-                "isOpen": true,
-                "link": "https://forms.gle/2nJk2rui967L1CSGA", 
-                "deadline": "nill" 
-          }
-        
-      },
-        {
-          "month": "July",
-          "date": "14",
-          "head": " LET’S FIGMA!",
-          "para": "Join our fun, beginner-friendly Figma workshop on July 14 & 15, from 4:30–6:00 PM in CS115! No experience needed — just bring your laptop and energy. Let’s design something awesome together!",
-          "img": "https://i.postimg.cc/25V1qrX7/Lets-Figma.jpg",
-          "reg": { 
-                "isOpen": false,
-                "link": "https://forms.gle/qC2KDhSHbvToAKLi7 ", 
-                "deadline": "2025-06-15" 
-          }
-        }, {
           "month": "Jun",
           "date": "12",
           "head": "Karmayottam",
           "para": "7 days of growth, productivity, action & rewards! Take on meaningful tasks, level up your skills & rise on the leaderboard!.The more tasks you complete, the higher you rise!.",
-          "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg",
-          "reg": { 
-                "isOpen": false,
-                "link": "https://tinyurl.com/karmayottam", 
-                "deadline": "2025-06-15" 
-          }
+          "img": "https://i.postimg.cc/3rLyXVYd/Karmayottam2.jpg"
         },
-        
         {
           "month": "May",
           "date": "28",
           "head": "CodeSprint 30",
           "para": "GDG GEC Palakkad and μLearn GECSKP launched a 30-day upskilling program starting May 28, focusing on resumes, interviews, and internships.Participants geared up for career success with expert-led sessions and hands-on guidance.",
-          "img": "https://i.postimg.cc/fRLHR65Z/Code-sprint.jpg",
-          "reg": { 
-            "isOpen": false,
-            "link": "https://example.com/register", 
-            "deadline": "2025-06-01" 
-      }
+          "img": "https://i.postimg.cc/fRLHR65Z/Code-sprint.jpg"
         },
         {
           "month": "April",
@@ -133,7 +81,6 @@
           "para": "Discover the Future of Electric Vehicles and Industries in India!",
           "img": "https://i.postimg.cc/vBcd9qyJ/Whats-App-Image-2024-07-17-at-12-32-46-4e202e01.jpg"
         },
-
         {
           "month": "Mar",
           "date": "25",
@@ -148,7 +95,6 @@
           "para": "µLearn GECSKP and µLearn MITS collaborated to organize an engaging Python online hands-on workshop tailored for beginners",
           "img": "https://i.postimg.cc/wxkGnH1g/python.jpg"
         },
-
         {
           "month": "Feb",
           "date": "13",
@@ -174,7 +120,7 @@
           "month": "Dec",
           "date": "27",
           "head": "Malabari Santa",
-          "para": "Northzone and GECSKP organized a thrilling animation challenge called Malabari Santa, showcasing creative depictions of Santa adapting to Kerala's culture.",
+          "para": "Northzone and GECSKP organized a thrilling animation challenge called Malabari Santa, showcasing creative depictions of Santa adapting to Kerala’s culture.",
           "img": "https://i.postimg.cc/JnNLMrL4/malabari-santa.jpg"
         }
       ]
@@ -182,8 +128,8 @@
   ],
   "achievements": [
     {
-    "title": "4th Best Campus Award at Perµte'25",
-      "description":"We're proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
+      "title": "4th Best Campus Award at Perµte'25",
+      "description": "We’re proud to be recognized as the 4th Best Campus at Perµte'25, the flagship annual celebration of µLearn! This honor reflects our campus's collective spirit of peer learning, tech exploration, and community-driven growth",
       "images": [
         "https://i.postimg.cc/rps6GpLH/m0.png",
         "https://i.postimg.cc/sD4btWj8/m1.png",
@@ -193,24 +139,8 @@
       ]
     }
   ],
-
   "gallery": {
     "row1": [
-      {
-        "image": "https://i.postimg.cc/c459bQzJ/figma-1.png"
-      },
-      {
-        "image": "https://i.postimg.cc/fTm4mqyN/figma2.png"
-      },
-      {
-        "image": "https://i.postimg.cc/50rB43W7/figma3.png"
-      },
-      {
-        "image": "https://i.postimg.cc/T3cHRZ7t/figma4.png"
-      },
-      {
-        "image": "https://i.postimg.cc/6Qmcqwdf/figma5.png"
-      },
       {
         "image": "https://i.postimg.cc/7LQpm0tR/Whats-App-Image-2024-06-30-at-21-10-47-2337d1f1.jpg"
       },
@@ -242,8 +172,6 @@
       }
     ]
   },
-
-  
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
@@ -251,96 +179,241 @@
     "karmaEarned": 360000,
     "rank": 14
   },
-
   "team": {
     "CampusEnabler": {
       "name": "ANOOP S K M",
-      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/anoopskm/"
     },
     "CampusLead": {
       "name": "ASLAM",
-      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aslam-m-h-d/"
     },
     "CampusCoLead1": {
       "name": "FAHAD",
-      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png"
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fahad/"
     },
     "CampusCoLead2": {
       "name": "GOPIKA",
-      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png"
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/gopika/"
     },
     "CreativeLead": {
       "name": "FADEELA",
-      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png"
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fadeela/"
     },
     "TechnicalLead": {
       "name": "AYSHA",
-      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png"
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aysha/"
     },
     "MediaLead": {
       "name": "AVANTHIKA",
-      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png"
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/avanthika/"
     },
     "DesignLead": {
       "name": "NAVAMI BR",
-      "image": "https://i.postimg.cc/G852gXNh/navami.png"
+      "image": "https://i.postimg.cc/G852gXNh/navami.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/navami/"
     },
     "TechTeam1": {
       "name": "ANUPAMA",
-      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png"
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/anupama/"
     },
     "TechTeam2": {
       "name": "UVAIS",
-      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png"
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/uvais/"
     },
     "TechTeam3": {
       "name": "AISWARYA",
-      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png"
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aiswarya/"
     },
     "MediaTeam1": {
       "name": "ATHUL",
-      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png"
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/athul/"
     },
     "MediaTeam2": {
       "name": "ATHULYA",
-      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png"
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/athulya/"
     },
     "MediaTeam3": {
       "name": "FIDHA",
-      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png"
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fidha/"
     },
     "DesignTeam1": {
       "name": "FAHAD MK",
-      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png"
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fahadmk/"
     },
     "DesignTeam2": {
       "name": "SANJANA",
-      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png"
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/sanjana/"
     },
     "IGLead(WebDev)": {
       "name": "SABARI",
-      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png"
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/sabari/"
     },
     "IGLead(UI/UX)": {
       "name": "RONNIE",
-      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png"
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/ronnie/"
     },
     "IGLead(IOT)": {
       "name": "VIGNESH",
-      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/vignesh/"
+    },
+    "CampusEnabler_2024": {
+      "name": "ANOOP S K M",
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/anoopskm/"
+    },
+    "CampusLead_2024": {
+      "name": "ASLAM",
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aslam-m-h-d/"
+    },
+    "CampusCoLead1_2024": {
+      "name": "FAHAD",
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fahad/"
+    },
+    "CampusCoLead2_2024": {
+      "name": "GOPIKA",
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/gopika/"
+    },
+    "CreativeLead_2024": {
+      "name": "FADEELA",
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fadeela/"
+    },
+    "TechnicalLead_2024": {
+      "name": "AYSHA",
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aysha/"
+    },
+    "MediaLead_2024": {
+      "name": "AVANTHIKA",
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/avanthika/"
+    },
+    "DesignLead_2024": {
+      "name": "NAVAMI BR",
+      "image": "https://i.postimg.cc/G852gXNh/navami.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/navami/"
+    },
+    "TechTeam1_2024": {
+      "name": "ANUPAMA",
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/anupama/"
+    },
+    "TechTeam2_2024": {
+      "name": "UBU",
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/uvais/"
+    },
+    "TechTeam3_2024": {
+      "name": "AISWARYA",
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aiswarya/"
+    },
+    "MediaTeam1_2024": {
+      "name": "ATHUL",
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/athul/"
+    },
+    "MediaTeam2_2024": {
+      "name": "ATHULYA",
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/athulya/"
+    },
+    "MediaTeam3_2024": {
+      "name": "FIDHA",
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fidha/"
+    },
+    "DesignTeam1_2024": {
+      "name": "FAHAD MK",
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fahadmk/"
+    },
+    "DesignTeam2_2024": {
+      "name": "SANJANA",
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/sanjana/"
+    },
+    "IGLead(WebDev)_2024": {
+      "name": "SABARI",
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/sabari/"
+    },
+    "IGLead(UI/UX)2024": {
+      "name": "RONNIE",
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/ronnie/"
+    },
+    "IGLead(IOT)_2024": {
+      "name": "VIGNESH",
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/vignesh/"
     }
   },
   "discordLink": "https://discord.gg/8ga5EEmAcy",
-
   "whatsAppLink": "https://chat.whatsapp.com/FvoLhftysm04LdsYt2S5Zt",
-
   "email": "mulearngecpkd@gmail.com",
-
   "linkedIn": "https://www.linkedin.com/company/%CE%BClearn-gec-pkd/",
-
   "instagram": "https://www.instagram.com/mulearn.gecskp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
-
   "X": "https://x.com/MulearnGecPkd",
-
   "youtube": "https://www.youtube.com/@MuLearnGECSKP"
 }
