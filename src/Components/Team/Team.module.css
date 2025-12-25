@@ -26,20 +26,23 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* Adjust as needed */
+    gap: 30px;
+    /* Adjust as needed */
     padding: 0px;
     position: relative;
     z-index: 1;
 }
 
 .team {
-    height: 20rem;
+    height: 100%;
+    min-height: 22rem;
     width: 15rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    padding-bottom: 10px;
 }
 
 .teamImageIndividual {
@@ -53,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 .teamMemberName {
@@ -98,4 +102,43 @@
     .team {
         width: 100%;
     }
+}
+
+.toggleContainer {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.toggleButton {
+    background: transparent;
+    border: 2px solid #ad58ff;
+    color: #ad58ff;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggleButton:hover {
+    background: rgba(173, 88, 255, 0.1);
+}
+
+.toggleButton.active {
+    background: #ad58ff;
+    color: white;
+}
+
+.linkedinIcon {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.linkedinIcon:hover {
+    color: #0077b5;
+    transform: scale(1.1);
 }

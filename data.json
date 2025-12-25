@@ -1,5 +1,5 @@
 {
-  "collegeCode": "GECSKP",
+   "collegeCode": "GECSKP",
 
   "college": "Government Engineering College      Sreekrishnapuram",
 
@@ -243,7 +243,7 @@
     ]
   },
 
-  
+
   "statistics": {
     "studentsCount": 712,
     "activeMembers": 202,
@@ -251,96 +251,241 @@
     "karmaEarned": 360000,
     "rank": 14
   },
-
   "team": {
     "CampusEnabler": {
       "name": "ANOOP S K M",
-      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png"
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/anoopskm/"
     },
     "CampusLead": {
       "name": "ASLAM",
-      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png"
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aslam-m-h-d/"
     },
     "CampusCoLead1": {
       "name": "FAHAD",
-      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png"
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fahad/"
     },
     "CampusCoLead2": {
       "name": "GOPIKA",
-      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png"
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/gopika/"
     },
     "CreativeLead": {
       "name": "FADEELA",
-      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png"
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fadeela/"
     },
     "TechnicalLead": {
       "name": "AYSHA",
-      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png"
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aysha/"
     },
     "MediaLead": {
       "name": "AVANTHIKA",
-      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png"
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/avanthika/"
     },
     "DesignLead": {
       "name": "NAVAMI BR",
-      "image": "https://i.postimg.cc/G852gXNh/navami.png"
+      "image": "https://i.postimg.cc/G852gXNh/navami.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/navami/"
     },
     "TechTeam1": {
       "name": "ANUPAMA",
-      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png"
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/anupama/"
     },
     "TechTeam2": {
       "name": "UVAIS",
-      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png"
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/uvais/"
     },
     "TechTeam3": {
       "name": "AISWARYA",
-      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png"
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/aiswarya/"
     },
     "MediaTeam1": {
       "name": "ATHUL",
-      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png"
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/athul/"
     },
     "MediaTeam2": {
       "name": "ATHULYA",
-      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png"
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/athulya/"
     },
     "MediaTeam3": {
       "name": "FIDHA",
-      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png"
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fidha/"
     },
     "DesignTeam1": {
       "name": "FAHAD MK",
-      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png"
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/fahadmk/"
     },
     "DesignTeam2": {
       "name": "SANJANA",
-      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png"
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/sanjana/"
     },
     "IGLead(WebDev)": {
       "name": "SABARI",
-      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png"
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/sabari/"
     },
     "IGLead(UI/UX)": {
       "name": "RONNIE",
-      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png"
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/ronnie/"
     },
     "IGLead(IOT)": {
       "name": "VIGNESH",
-      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png"
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png",
+      "year": 2025,
+      "linkedin": "https://www.linkedin.com/in/vignesh/"
+    },
+    "CampusEnabler_2024": {
+      "name": "ANOOP S K M",
+      "image": "https://i.postimg.cc/CZMxhypx/ANOOP.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/anoopskm/"
+    },
+    "CampusLead_2024": {
+      "name": "ASLAM",
+      "image": "https://i.postimg.cc/YGh2F19c/ASLAM.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aslam-m-h-d/"
+    },
+    "CampusCoLead1_2024": {
+      "name": "FAHAD",
+      "image": "https://i.postimg.cc/RW7WCQ3X/FAHADH.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fahad/"
+    },
+    "CampusCoLead2_2024": {
+      "name": "GOPIKA",
+      "image": "https://i.postimg.cc/0MQjCTVB/GOPIKA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/gopika/"
+    },
+    "CreativeLead_2024": {
+      "name": "FADEELA",
+      "image": "https://i.postimg.cc/rKSV5y8p/FADEELA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fadeela/"
+    },
+    "TechnicalLead_2024": {
+      "name": "AYSHA",
+      "image": "https://i.postimg.cc/SJ0QXYb5/AYSHA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aysha/"
+    },
+    "MediaLead_2024": {
+      "name": "AVANTHIKA",
+      "image": "https://i.postimg.cc/fkSTTjpm/AVANTHIKA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/avanthika/"
+    },
+    "DesignLead_2024": {
+      "name": "NAVAMI BR",
+      "image": "https://i.postimg.cc/G852gXNh/navami.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/navami/"
+    },
+    "TechTeam1_2024": {
+      "name": "ANUPAMA",
+      "image": "https://i.postimg.cc/kVjXDj7F/Anupama.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/anupama/"
+    },
+    "TechTeam2_2024": {
+      "name": "UBU",
+      "image": "https://i.postimg.cc/F7cRGgxN/UVAIS.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/uvais/"
+    },
+    "TechTeam3_2024": {
+      "name": "AISWARYA",
+      "image": "https://i.postimg.cc/Xrkv6jhP/AISWARYA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/aiswarya/"
+    },
+    "MediaTeam1_2024": {
+      "name": "ATHUL",
+      "image": "https://i.postimg.cc/ygt1ykgD/ATHUL.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/athul/"
+    },
+    "MediaTeam2_2024": {
+      "name": "ATHULYA",
+      "image": "https://i.postimg.cc/jnfsgtPZ/ATHULYA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/athulya/"
+    },
+    "MediaTeam3_2024": {
+      "name": "FIDHA",
+      "image": "https://i.postimg.cc/8FTj7JMD/FIDHA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fidha/"
+    },
+    "DesignTeam1_2024": {
+      "name": "FAHAD MK",
+      "image": "https://i.postimg.cc/GBz9GLxD/M-FAHAD.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/fahadmk/"
+    },
+    "DesignTeam2_2024": {
+      "name": "SANJANA",
+      "image": "https://i.postimg.cc/YjT01yYd/SANJANA.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/sanjana/"
+    },
+    "IGLead(WebDev)_2024": {
+      "name": "SABARI",
+      "image": "https://i.postimg.cc/p55dwDbQ/SABARI.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/sabari/"
+    },
+    "IGLead(UI/UX)2024": {
+      "name": "RONNIE",
+      "image": "https://i.postimg.cc/NLKL2w9y/RONNIE.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/ronnie/"
+    },
+    "IGLead(IOT)_2024": {
+      "name": "VIGNESH",
+      "image": "https://i.postimg.cc/yDHNGgf9/VIGHNESH.png",
+      "year": 2024,
+      "linkedin": "https://www.linkedin.com/in/vignesh/"
     }
   },
   "discordLink": "https://discord.gg/8ga5EEmAcy",
-
   "whatsAppLink": "https://chat.whatsapp.com/FvoLhftysm04LdsYt2S5Zt",
-
   "email": "mulearngecpkd@gmail.com",
-
   "linkedIn": "https://www.linkedin.com/company/%CE%BClearn-gec-pkd/",
-
   "instagram": "https://www.instagram.com/mulearn.gecskp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
-
   "X": "https://x.com/MulearnGecPkd",
-
   "youtube": "https://www.youtube.com/@MuLearnGECSKP"
 }
