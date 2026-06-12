@@ -11,14 +11,14 @@
       "eventDetails": [
         {
           "month": "Jun",
-          "date": "15",
+          "date": "14",
           "head": "Vibecoding 101",
           "para": "Where prompt meets programming, your guide to vibecoding",
-          "img": "/src/assets/images/vibecoding-101.png",
+          "img": "https://i.postimg.cc/4dtB0stn/vibecoding101.png",
           "reg": {
             "isOpen": true,
             "link": "https://tinyurl.com/vibecoding101-gecskp",
-            "deadline": "Jul 14 at 11:59pm"
+            "deadline": "nill"
           }
         }
       ]
