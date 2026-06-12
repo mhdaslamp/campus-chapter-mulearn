@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 // import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
@@ -15,11 +16,34 @@ import AllEventsPage from "./pages/AllEventsPage";
 import GalleryPage from "./pages/GalleryPage";
 import Achievements from "./Components/Achievements/Achievements";
 
+const ScrollToHash = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const id = location.hash.substring(1);
+    const scrollToElement = () => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    scrollToElement();
+    const timeoutId = window.setTimeout(scrollToElement, 100);
+    return () => window.clearTimeout(timeoutId);
+  }, [location]);
+
+  return null;
+};
+
 // Note: React Router v6 warnings about future flags can be safely ignored
 // These warnings are about upcoming changes in v7 and will be addressed when upgrading
 function App() {
     return (
         <Router>
+            <ScrollToHash />
             <Routes>
                 <Route path="/" element={
                     <div className="appWrapper">
