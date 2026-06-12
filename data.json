@@ -14,7 +14,7 @@
           "date": "15",
           "head": "Vibecoding 101",
           "para": "Where prompt meets programming, your guide to vibecoding",
-          "img": "vibecoding 101.png",
+          "img": "/src/assets/images/vibecoding-101.png",
           "reg": {
             "isOpen": true,
             "link": "https://tinyurl.com/vibecoding101-gecskp",
