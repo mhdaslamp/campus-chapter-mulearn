@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 // import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
@@ -50,6 +50,7 @@ function App() {
                         <Footer />
                     </>
                 } />
+                <Route path="/events" element={<Navigate to="/#events" replace />} />
             </Routes>
         </Router>
     );

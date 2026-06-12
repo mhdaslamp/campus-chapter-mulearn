@@ -47,7 +47,11 @@ interface EventsData {
 
 const Events: React.FC = () => {
   const eventsData = data as EventsData;
-  const [selectedYear, setSelectedYear] = useState<number>(2025);
+  const [selectedYear, setSelectedYear] = useState<number>(
+    eventsData.events.length > 0
+      ? Math.max(...eventsData.events.map(event => event.year))
+      : new Date().getFullYear()
+  );
   const [isInView, setIsInView] = useState(false);
   const [expandedCards, setExpandedCards] = useState<number[]>([]);
   const eventsRef = useRef<HTMLDivElement>(null);
