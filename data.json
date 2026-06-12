@@ -7,6 +7,23 @@
 
   "events": [
     {
+      "year": 2026,
+      "eventDetails": [
+        {
+          "month": "Jun",
+          "date": "14",
+          "head": "Vibecoding 101",
+          "para": "Where prompt meets programming, your guide to vibecoding",
+          "img": "https://i.postimg.cc/4dtB0stn/vibecoding101.png",
+          "reg": {
+            "isOpen": true,
+            "link": "https://tinyurl.com/vibecoding101-gecskp",
+            "deadline": "nill"
+          }
+        }
+      ]
+    },
+    {
       "year": 2025,
       "eventDetails": [
           {
