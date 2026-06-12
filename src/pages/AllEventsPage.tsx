@@ -22,9 +22,11 @@ interface EventsData {
 
 const AllEventsPage = () => {
   const navigate = useNavigate();
-  const [selectedYear, setSelectedYear] = useState<number>(2025);
   const eventsData = data as EventsData;
   const years = eventsData.events.map(event => event.year).sort((a, b) => b - a);
+  const [selectedYear, setSelectedYear] = useState<number>(
+    years.length > 0 ? years[0] : new Date().getFullYear()
+  );
   
   // Scroll to top when component mounts
   useEffect(() => {
