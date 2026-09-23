@@ -51,7 +51,7 @@
 
 .navbarRight>div {
   display: flex;
-  gap: 5vh;
+  gap: clamp(12px, 2vw, 5vh);
   align-items: center;
   justify-content: center;
 }
@@ -63,7 +63,7 @@
 .navbarRight {
   display: flex;
   align-items: center;
-  gap: 5vh;
+  gap: clamp(16px, 2.5vw, 5vh);
   padding: 0px 35px;
   background-color: transparent;
   justify-content: center;

@@ -12,13 +12,34 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navContent = ["Home", "About", "Events", "Achievements", "Gallery", "Team", "Contact"];
+  interface NavItem {
+    name: string;
+    href?: string;
+    isExternal?: boolean;
+  }
+
+  const navItems: NavItem[] = [
+    { name: "Home" },
+    { name: "About" },
+    { name: "Events" },
+    {
+      name: "Learning Circles",
+      href: "https://mulearngecskp-learning-circles.vercel.app/circles",
+      isExternal: true,
+    },
+    { name: "Achievements" },
+    { name: "Gallery" },
+    { name: "Team" },
+    { name: "Contact" },
+  ];
+
+  const sectionIds = ["home", "about", "events", "achievements", "gallery", "team", "contact"];
 
   const updateActiveSection = useCallback(() => {
     const scrollPosition = window.scrollY + 100;
-    const sections = navContent.map(section => ({
-      id: section.toLowerCase(),
-      element: document.getElementById(section.toLowerCase())
+    const sections = sectionIds.map((id) => ({
+      id,
+      element: document.getElementById(id),
     }));
 
     for (let i = sections.length - 1; i >= 0; i--) {
@@ -28,7 +49,7 @@ const Navbar = () => {
         break;
       }
     }
-  }, [navContent]);
+  }, []);
 
   // Scroll to top on page load/refresh
   useEffect(() => {
@@ -58,35 +79,35 @@ const Navbar = () => {
       const sectionTop = section.offsetTop - navbarHeight;
       window.scrollTo({
         top: sectionTop,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   }, []);
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
     }
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-    setActiveSection('home');
+    setActiveSection("home");
   };
 
   const handleNavClick = (content: string, e: React.MouseEvent) => {
     e.preventDefault();
     const sectionId = content.toLowerCase();
-    
+
     if (location.pathname === "/all-events" && content === "Events") {
-      navigate('/');
+      navigate("/");
       setTimeout(() => scrollToSection(sectionId), 100);
     } else if (location.pathname === "/gallery" && content === "Gallery") {
-      navigate('/');
+      navigate("/");
       setTimeout(() => scrollToSection(sectionId), 100);
-    } else if (location.pathname !== '/') {
-      navigate('/');
+    } else if (location.pathname !== "/") {
+      navigate("/");
       setTimeout(() => scrollToSection(sectionId), 100);
     } else {
       scrollToSection(sectionId);
@@ -116,20 +137,36 @@ const Navbar = () => {
       </div>
       <div className={styles.navbarRight}>
         <div>
-          {navContent.map((content, i) => (
-            <a 
-              href={`#${content.toLowerCase()}`} 
-              key={i.toString() + content}
-              onClick={(e) => handleNavClick(content, e)}
-              className={styles.navLink}
-              style={{
-                color: activeSection === content.toLowerCase() ? "#ae59ff" : "inherit",
-                fontWeight: activeSection === content.toLowerCase() ? "600" : "400"
-              }}
-            >
-              {content}
-            </a>
-          ))}
+          {navItems.map((item, i) =>
+            item.isExternal ? (
+              <a
+                href={item.href}
+                key={i.toString() + item.name}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.navLink}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <a
+                href={`#${item.name.toLowerCase()}`}
+                key={i.toString() + item.name}
+                onClick={(e) => handleNavClick(item.name, e)}
+                className={styles.navLink}
+                style={{
+                  color:
+                    activeSection === item.name.toLowerCase()
+                      ? "#ae59ff"
+                      : "inherit",
+                  fontWeight:
+                    activeSection === item.name.toLowerCase() ? "600" : "400",
+                }}
+              >
+                {item.name}
+              </a>
+            )
+          )}
         </div>
         <button>
           <a target="_blank" href="http://app.mulearn.org/register">
@@ -144,20 +181,40 @@ const Navbar = () => {
         </button>
         {isMenuOpen && (
           <div>
-            {navContent.map((content, i) => (
-              <a 
-                href={`#${content.toLowerCase()}`} 
-                key={i.toString() + content}
-                onClick={(e) => handleNavClick(content, e)}
-                className={styles.mobileNavLink}
-                style={{
-                  color: activeSection === content.toLowerCase() ? "#ae59ff" : "white",
-                  fontWeight: activeSection === content.toLowerCase() ? "600" : "400"
-                }}
-              >
-                {content}
-              </a>
-            ))}
+            {navItems.map((item, i) =>
+              item.isExternal ? (
+                <a
+                  href={item.href}
+                  key={i.toString() + item.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileNavLink}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <a
+                  href={`#${item.name.toLowerCase()}`}
+                  key={i.toString() + item.name}
+                  onClick={(e) => {
+                    handleNavClick(item.name, e);
+                    setIsMenuOpen(false);
+                  }}
+                  className={styles.mobileNavLink}
+                  style={{
+                    color:
+                      activeSection === item.name.toLowerCase()
+                        ? "#ae59ff"
+                        : "white",
+                    fontWeight:
+                      activeSection === item.name.toLowerCase() ? "600" : "400",
+                  }}
+                >
+                  {item.name}
+                </a>
+              )
+            )}
             <button>
               <a href="http://app.mulearn.org/register">Join µlearn</a>
             </button>
