@@ -142,8 +142,6 @@ const Navbar = () => {
               <a
                 href={item.href}
                 key={i.toString() + item.name}
-                target="_blank"
-                rel="noopener noreferrer"
                 className={styles.navLink}
               >
                 {item.name}
@@ -186,8 +184,6 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   key={i.toString() + item.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className={styles.mobileNavLink}
                   onClick={() => setIsMenuOpen(false)}
                 >
