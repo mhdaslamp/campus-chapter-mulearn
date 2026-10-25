@@ -3,8 +3,19 @@ import data from "../../../data.json";
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 
+const localTeamImages = import.meta.glob<string>(
+  "/src/assets/images/execome2026/*.png",
+  { eager: true, import: "default" }
+);
+
+const getTeamImage = (imageSrc: string) => {
+  if (!imageSrc) return "";
+  const normalizedKey = imageSrc.startsWith("/") ? imageSrc : `/${imageSrc}`;
+  return localTeamImages[normalizedKey] || imageSrc;
+};
+
 const Team = () => {
-  const [activeYear, setActiveYear] = useState(2025);
+  const [activeYear, setActiveYear] = useState(2026);
 
   const filteredTeam = Object.entries(data.team).filter(
     ([_, member]) => (member as any).year === activeYear
@@ -16,6 +27,12 @@ const Team = () => {
 
       <div className={styles.toggleContainer}>
 
+        <button
+          className={`${styles.toggleButton} ${activeYear === 2026 ? styles.active : ''}`}
+          onClick={() => setActiveYear(2026)}
+        >
+          2026
+        </button>
         <button
           className={`${styles.toggleButton} ${activeYear === 2025 ? styles.active : ''}`}
           onClick={() => setActiveYear(2025)}
@@ -47,7 +64,7 @@ const Team = () => {
               <div className={styles.team1Img}>
                 <img
                   className={styles.teamImageIndividual}
-                  src={(member as any).image}
+                  src={getTeamImage((member as any).image)}
                   alt={(member as any).name}
                   loading="lazy"
                 />
@@ -57,7 +74,9 @@ const Team = () => {
                 <div className={styles.teamMemberDesignation}>
                   {key.includes("null")
                     ? "Team Member"
-                    : key.replace("_2024", "").replace(/([A-Z])/g, " $1").trim()}
+                    : key.startsWith("Mentor")
+                    ? "Mentor"
+                    : key.replace(/_\d{4}/, "").replace(/([A-Z])/g, " $1").trim()}
                 </div>
                 {(member as any).linkedin && (
                   <a href={(member as any).linkedin} target="_blank" rel="noopener noreferrer" className={styles.linkedinIcon}>
